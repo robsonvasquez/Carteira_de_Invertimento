@@ -1,8 +1,8 @@
 # Carteira de Investimento
 
 #### Descrição
-Este projeto está sendo desenvolvido para organizar os investimentos financeiros que o usuário possue como ações, fundos de investimentos, criptomoedas entre outros.
-O usuário vai poder cadastrar, atualizar, deletar os investimetos quais ele tenha cadastrado na aplicação.
+Este projeto está sendo desenvolvido para organizar os investimentos financeiros que o usuário possui como ações, fundos de investimentos, criptomoedas entre outros. 
+O usuário vai poder cadastrar, atualizar, deletar os investimentos quais ele tenha cadastrado na aplicação.
 
 ## Em faze de desenvolvimento ....
 Em breve!
