@@ -1,8 +1,11 @@
+import { BrowserRouter } from 'react-router-dom'
 import './input.css'
-import Login from './pages/Login'
+import Router from './Router'
 
 export default function App() {
   return (
-    <Login/>
+    <BrowserRouter>
+      <Router/>
+    </BrowserRouter>
   )
 }
