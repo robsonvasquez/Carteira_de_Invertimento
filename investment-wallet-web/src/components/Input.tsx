@@ -1,4 +1,4 @@
-import { User } from "phosphor-react"
+import { User, LockSimple } from "phosphor-react"
 
 interface InputProps {
   value?: any
@@ -7,10 +7,19 @@ interface InputProps {
   placeholder: string
   valueChange?: (value: any) => void
   className?: string
+  image: string
+}
+
+function loadImage(image : string){
+  if (image == 'User'){
+    return(<User className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />)
+  }
+  if (image == 'Lock'){
+    return(<LockSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />)
+  }
 }
 
 export default function Input(props : InputProps){
-  console.log(props.className)
   return(
     <div className="flex justify-start relative">
       <input
@@ -24,10 +33,10 @@ export default function Input(props : InputProps){
         }
         value={props.value}
         type="text"
-        placeholder={ props.placeholder}
+        placeholder={props.placeholder}
         onChange = {e => props.valueChange?.(e.target.value)}
       />
-      <User className="absolute ml-2 mt-2" size={24} color="#000000" />
+      {loadImage(props.image)}     
     </div>
       
   );

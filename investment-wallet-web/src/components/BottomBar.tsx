@@ -1,13 +1,16 @@
-import { InstagramLogo, FacebookLogo, WhatsappLogo } from "phosphor-react";
-import Logo from "./Logo";
+import { InstagramLogo, FacebookLogo, WhatsappLogo, Wallet } from "phosphor-react";
+
 
 export default function BottomBar(){
   return(
     <div className="w-full items-center bg-[#1E5128]">
       <div className="w-full items-center">
-        <div className="flex justify-between pt-3 pb-10 px-40">
+        <div className="flex justify-between pt-3 pb-10 pl-40 pr-96">
           <div className="flex flex-col">
-            <Logo/>
+            <div className="flex items-center">
+              <Wallet className="mr-2" color="#ffffff" size={48} weight="fill" />
+              <h1 className={`text-white text-4xl font-bold`}>Wallet</h1>
+            </div>
             <span className="text-white">Todos os direitos reservados</span>
           </div>
           <div className="text-white flex">
