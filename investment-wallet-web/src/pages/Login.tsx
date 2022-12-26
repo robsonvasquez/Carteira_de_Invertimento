@@ -16,9 +16,7 @@ export default function Login() {
       <img className="max-w-[100px]" src={logoImage} alt=""/>
       <h1 className="m-3">Carteira de Investimento</h1>
       <div className="flex flex-col justify-center">
-        <Label label='Login'/>
         <Input placeholder="Longin" valueChange={setlogin}/>
-        <Label label='Senha'/>
         <Input placeholder="Senha"/>
         <Button text='Entrar' onclick={clica}/>
       </div>
