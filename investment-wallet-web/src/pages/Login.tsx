@@ -1,7 +1,9 @@
-import Input from '../components/Input';
-import Button from '../components/Button';
+import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { Wallet } from "phosphor-react";
+
+import Input from '../components/Input';
+import Button from '../components/Button';
 
 export default function Login() {
   
@@ -21,7 +23,9 @@ export default function Login() {
         <Input image="Lock" placeholder="Senha"/>
         <Button text='Entrar' onclick={clica}/>
         <span className='text-[#1E5128] text-sm font-bold mt-3'>Esqueceu sua Senha?</span>
-        <Button className='w-60 mt-12' text='Criar nova conta' onclick={clica}/>
+        <Link to={'/newcount'}>
+          <Button className='w-60 mt-12' text='Criar nova conta'/>
+        </Link>  
       </div>
     </div>
     

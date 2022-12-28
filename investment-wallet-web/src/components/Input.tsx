@@ -1,4 +1,4 @@
-import { User, LockSimple } from "phosphor-react"
+import { User, LockSimple, EnvelopeSimple, Eye } from "phosphor-react"
 
 interface InputProps {
   value?: any
@@ -15,7 +15,15 @@ function loadImage(image : string){
     return(<User className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />)
   }
   if (image == 'Lock'){
-    return(<LockSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />)
+    return(
+      <div className="absolute w-full flex justify-between">
+        <LockSimple className=" ml-2 mt-2" size={24} color="#000000" weight="regular" />
+        <Eye className="mr-2 mt-2" size={24} color="#000000" weight="regular" />
+      </div>
+    )
+  }
+  if (image == 'Email'){
+    return (<EnvelopeSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />)
   }
 }
 

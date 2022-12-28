@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import Table from "../components/Table/Table";
 import TopBar from "../components/TopBar";
 import BottomBar from "../components/BottomBar";
@@ -46,8 +47,8 @@ export default function Home(){
       <TopBar/>
       <div className="w-full p-8 flex flex-col items-center">
         <div className="w-full bg-white border border-gray-300 rounded-lg flex justify-between p-3">
-          <Link to="user">Usuário</Link>
-          <Link to="login">Login</Link>
+          <Link to="/user">Usuário</Link>
+          <Link to="/login">Login</Link>
         </div>
         <div className="w-1/2 mt-5 justify-center flex">
           <Table header={header} list={l}/>
