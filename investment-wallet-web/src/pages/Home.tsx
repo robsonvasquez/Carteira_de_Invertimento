@@ -7,39 +7,35 @@ import BottomBar from "../components/BottomBar";
 const l = [
   {
     id: 1,
-    element: 'Poupança',
+    active: 'Poupança',
+    currentPrice: 10,
+    paidPrice: 20,
+    variation: 2,
   },    
   {
     id: 2,
-    element: 'Fundo',
-    price: 10
+    active: 'Poupança',
+    currentPrice: 10,
+    paidPrice: 20,
+    variation: 2,
   },
   {
     id: 3,
-    element: 'CBD',
-    price: 10
+    active: 'Poupança',
+    currentPrice: 10,
+    paidPrice: 20,
+    variation: 2,
   },
   {
     id: 4,
-    element: 'Ações',
-    price: 10
+    active: 'Poupança',
+    currentPrice: 10,
+    paidPrice: 20,
+    variation: 2,
   }
 ]
 
-const listHeader = [
-  {
-    key: 'id',
-    value: 'Identificador',
-    price: 'Preço',
-  },
-  {
-    key: 'element',
-    value: 'Investimento',
-    price: 'Preço',
-  },
-]
-
-const header = ['Identificador', 'Investimento', 'Preço']
+const header = ['Ativo', 'Preço pago', 'Preço Atual', 'Variação', 'Opções']
 
 export default function Home(){
   return(
@@ -50,7 +46,7 @@ export default function Home(){
           <Link to="/user">Usuário</Link>
           <Link to="/login">Login</Link>
         </div>
-        <div className="w-1/2 mt-5 justify-center flex">
+        <div className="w-9/12 mt-5 justify-center flex">
           <Table header={header} list={l}/>
         </div>
       </div>
