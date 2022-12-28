@@ -1,4 +1,5 @@
-import { User, LockSimple, EnvelopeSimple, Eye } from "phosphor-react"
+import { useState } from "react";
+import { User, LockSimple, EnvelopeSimple, Eye, EyeSlash } from "phosphor-react";
 
 interface InputProps {
   value?: any
@@ -10,24 +11,11 @@ interface InputProps {
   image: string
 }
 
-function loadImage(image : string){
-  if (image == 'User'){
-    return(<User className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />)
-  }
-  if (image == 'Lock'){
-    return(
-      <div className="absolute w-full flex justify-between">
-        <LockSimple className=" ml-2 mt-2" size={24} color="#000000" weight="regular" />
-        <Eye className="mr-2 mt-2" size={24} color="#000000" weight="regular" />
-      </div>
-    )
-  }
-  if (image == 'Email'){
-    return (<EnvelopeSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />)
-  }
-}
 
 export default function Input(props : InputProps){
+
+  const [eye,setEye] = useState(false);
+
   return(
     <div className="flex justify-start relative">
       <input
@@ -44,8 +32,19 @@ export default function Input(props : InputProps){
         placeholder={props.placeholder}
         onChange = {e => props.valueChange?.(e.target.value)}
       />
-      {loadImage(props.image)}     
-    </div>
+      {props.image == 'user' ? (<User className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
+     
+      {props.image == 'emeil' ? (<EnvelopeSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
+
+      {props.image == 'lock' ? ( 
+        <div className="absolute w-full flex justify-between" onClick={() => setEye(!eye)}>
+          <LockSimple className=" ml-2 mt-2" size={24} color="#000000" weight="regular" />
+          {eye ? (<Eye className="mr-2 mt-2" size={24} color="#000000" weight="regular" />) : (<EyeSlash className="mr-2 mt-2" size={24} color="#000000" weight="regular" />)}
+        </div>
+      ): (<></>) }
       
+        
+      
+    </div>     
   );
 }

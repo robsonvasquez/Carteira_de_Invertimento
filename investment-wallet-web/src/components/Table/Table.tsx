@@ -34,9 +34,11 @@ export default function Table(props : TableProps){
             <div className="table-cell text-center align-middle">{l.currentPrice}</div>
             <div className="table-cell text-center align-middle">{l.paidPrice}</div>
             <div className="table-cell text-center align-middle">{l.variation}</div>
-            <div className="flex justify-center items-center">
-              <NotePencil size={24} color="#31A900" width='regular'/>
-              <TrashSimple size={24} color="#FF0000" width='regular' />
+            <div className="table-cell">
+              <div className="flex justify-center items-center">
+                <NotePencil size={24} color="#31A900" width='regular'/>
+                <TrashSimple size={24} color="#FF0000" width='regular' />
+              </div>
             </div>
           </div>  
         ))}  
