@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import Input from "../components/Input";
 import Button from "../components/Button";
+import LinkGreen from "../components/LinkGreen";
 
 export default function NewCount(){
   return(
@@ -14,11 +15,16 @@ export default function NewCount(){
           <Input image="lock" eye placeholder="Senha"/>
           <Input image="lock" eye placeholder="Confirme a senha"/>
 
-          <span className='text-center text-sm font-bold'>Ao se registrar, você aceita nossos <span className='text-[#1E5128]'>termos de uso</span> e a nossa <span className='text-[#1E5128]'>política de privacidade.</span></span>
+          <span className='text-center text-sm font-bold'>
+            Ao se registrar, você aceita nossos&nbsp;
+            <LinkGreen to='/' text='termos de uso'/>
+            e a nossa&nbsp;
+            <LinkGreen to='/' text='política de privacidade.'/>  
+          </span>
           
           <Button className='mt-5' text='Cadastrar'/>
           
-          <Link to='/login' className="mt-5 text-[#1E5128] text-sm font-bold">Voltar ao login.</Link>
+          <LinkGreen to='/login' className="mt-5" text="Voltar ao login."/>
         </div>
       </div>
     </div>

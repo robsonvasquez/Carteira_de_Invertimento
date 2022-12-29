@@ -1,5 +1,6 @@
 import Button from "../components/Button";
 import Input from "../components/Input";
+import LinkGreen from "../components/LinkGreen";
 import TopBar from "../components/TopBar";
 
 export default function Profile(){
@@ -20,7 +21,7 @@ export default function Profile(){
             
             <Button text='Salvar'/>
             
-            <span className="mt-5 text-[#1E5128] text-sm font-bold">Excluir minha conta.</span>
+            <LinkGreen to='/' className='mt-5' text='Excluir minha conta.'/>
           </div>
         </div>
       </div>

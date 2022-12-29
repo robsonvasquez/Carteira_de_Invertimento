@@ -4,6 +4,7 @@ import { Wallet } from "phosphor-react";
 
 import Input from '../components/Input';
 import Button from '../components/Button';
+import LinkGreen from "../components/LinkGreen";
 
 export default function Login() {
   
@@ -24,7 +25,7 @@ export default function Login() {
         <Input image="email" placeholder="Email" valueChange={setlogin}/>
         <Input image="lock" eye placeholder="Senha"/>
         <Button text='Entrar'/>
-        <span className='text-[#1E5128] text-sm font-bold mt-5'>Esqueceu sua Senha?</span>
+        <LinkGreen to='/' className='mt-5' text='Esqueceu sua Senha?'/>
         <Link to={'/newcount'}>
           <Button className='w-60 mt-8' text='Criar nova conta'/>
         </Link>  
