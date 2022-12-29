@@ -9,22 +9,25 @@ interface InputProps {
   valueChange?: (value: any) => void
   className?: string
   image: string
+  eye?: boolean
 }
+
+
 
 
 export default function Input(props : InputProps){
 
-  const [eye,setEye] = useState(false);
-
+  const [showEye,setShowEye] = useState(true);
+  
   return(
-    <div className="flex justify-start relative">
+    <div className="relative flex">
       <input
         className={
           `h-10 w-96 p-1 mb-5 pl-9 
           placeholder-[#1E5128]
           font-bold text-base 
           rounded-lg border-2 border-zinc-800 
-          focus:outline-none focus:ring-2 focus:border-[#1E5128]
+          focus:outline-none focus:ring-2 ring-green-800 focus:border-[#1E5128]
           ${props.className}`
         }
         value={props.value}
@@ -34,17 +37,18 @@ export default function Input(props : InputProps){
       />
       {props.image == 'user' ? (<User className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
      
-      {props.image == 'emeil' ? (<EnvelopeSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
+      {props.image == 'email' ? (<EnvelopeSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
 
-      {props.image == 'lock' ? ( 
-        <div className="absolute w-full flex justify-between" onClick={() => setEye(!eye)}>
-          <LockSimple className=" ml-2 mt-2" size={24} color="#000000" weight="regular" />
-          {eye ? (<Eye className="mr-2 mt-2" size={24} color="#000000" weight="regular" />) : (<EyeSlash className="mr-2 mt-2" size={24} color="#000000" weight="regular" />)}
-        </div>
-      ): (<></>) }
+      {props.image == 'lock' ? (<LockSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
+
+      {props.eye ? (
+          <>
+            {showEye ? (<Eye className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => setShowEye(!showEye)}/>) : 
+            (<EyeSlash className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => setShowEye(!showEye)}/>)} 
+          </> 
+        ) : (<></>)       
+      }
       
-        
-      
-    </div>     
+    </div>
   );
 }
