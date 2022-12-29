@@ -11,6 +11,7 @@ import Login from './pages/Login'
 import User from './pages/User'
 import Home from './pages/Home';
 import NewCount from './pages/NewCount';
+import Profile from "./pages/Profile";
 
 // const router = createBrowserRouter([
 //   {
@@ -44,6 +45,7 @@ export default function Router(){
       <Route path='/user' element={<User/>}/> 
       <Route path='/login' element={<Login/>}/>
       <Route path='/newcount' element={<NewCount/>}/> 
+      <Route path='/profile' element={<Profile/>}/> 
     </Routes>
   );
 }

@@ -12,13 +12,13 @@ export default function NewCount(){
           <Input image="email" placeholder="Email"/>
           <Input image="user" placeholder="Nome"/>
           <Input image="lock" eye placeholder="Senha"/>
-          <Input image="lock" eye placeholder="Confirmar senha"/>
+          <Input image="lock" eye placeholder="Confirme a senha"/>
 
-          <span className='text-center text-sm font-bold mt-3'>Ao se registrar, você aceita nossos <span className='text-[#1E5128]'>termos de uso</span> e a nossa <span className='text-[#1E5128]'>política de privacidade.</span></span>
+          <span className='text-center text-sm font-bold'>Ao se registrar, você aceita nossos <span className='text-[#1E5128]'>termos de uso</span> e a nossa <span className='text-[#1E5128]'>política de privacidade.</span></span>
           
-          <Button className='w-60 mt-10' text='Cadastrar'/>
+          <Button className='mt-5' text='Cadastrar'/>
           
-          <Link to='/login' className="mt-8 text-[#1E5128] text-sm font-bold">Voltar ao login.</Link>
+          <Link to='/login' className="mt-5 text-[#1E5128] text-sm font-bold">Voltar ao login.</Link>
         </div>
       </div>
     </div>

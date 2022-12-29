@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { User, LockSimple, EnvelopeSimple, Eye, EyeSlash } from "phosphor-react";
+import { User, LockSimple, EnvelopeSimple, Eye, EyeSlash, Phone, IdentificationCard } from "phosphor-react";
 
 interface InputProps {
   value?: any
@@ -11,9 +11,6 @@ interface InputProps {
   image: string
   eye?: boolean
 }
-
-
-
 
 export default function Input(props : InputProps){
 
@@ -41,6 +38,10 @@ export default function Input(props : InputProps){
 
       {props.image == 'lock' ? (<LockSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
 
+      {props.image == 'phone' ? (<Phone className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>)}
+      
+      {props.image == 'card' ? (<IdentificationCard className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>)}
+      
       {props.eye ? (
           <>
             {showEye ? (<Eye className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => setShowEye(!showEye)}/>) : 

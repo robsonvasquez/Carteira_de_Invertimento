@@ -21,12 +21,12 @@ export default function Login() {
         </div>
       </Link>
       <div className="flex flex-col justify-center items-center">
-        <Input image="user" placeholder="Login" valueChange={setlogin}/>
+        <Input image="email" placeholder="Email" valueChange={setlogin}/>
         <Input image="lock" eye placeholder="Senha"/>
         <Button text='Entrar'/>
-        <span className='text-[#1E5128] text-sm font-bold mt-3'>Esqueceu sua Senha?</span>
+        <span className='text-[#1E5128] text-sm font-bold mt-5'>Esqueceu sua Senha?</span>
         <Link to={'/newcount'}>
-          <Button className='w-60 mt-12' text='Criar nova conta'/>
+          <Button className='w-60 mt-8' text='Criar nova conta'/>
         </Link>  
       </div>
     </div>
