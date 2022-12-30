@@ -23,7 +23,7 @@ export default function Login() {
       </Link>
       <div className="flex flex-col justify-center items-center">
         <Input image="email" placeholder="Email" valueChange={setlogin}/>
-        <Input image="lock" eye placeholder="Senha"/>
+        <Input image="lock" type="password" placeholder="Senha"/>
         <Button text='Entrar'/>
         <LinkGreen to='/' className='mt-5' text='Esqueceu sua Senha?'/>
         <Link to={'/newcount'}>

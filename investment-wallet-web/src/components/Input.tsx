@@ -1,20 +1,26 @@
 import { useState } from "react";
-import { User, LockSimple, EnvelopeSimple, Eye, EyeSlash, Phone, IdentificationCard } from "phosphor-react";
+import { User, LockSimple, EnvelopeSimple, Eye, EyeSlash, Phone, IdentificationCard, Password } from "phosphor-react";
 
 interface InputProps {
   value?: any
-  type?: 'text' | 'number'
+  type?: 'text' | 'number' | 'password'
   read?: boolean
   placeholder: string
   valueChange?: (value: any) => void
   className?: string
   image: string
-  eye?: boolean
 }
 
 export default function Input(props : InputProps){
 
-  const [showEye,setShowEye] = useState(true);
+  function passwordEye(type: 'text' | 'password'){
+    setType(type);
+    setHiddenPassword(!hiddenPassword);
+  }
+
+  const [showEye,setShowEye] = useState(props.type == 'password' ? true : false);
+  const [hiddenPassword,setHiddenPassword] = useState(showEye ? false : true);
+  const [type, setType] = useState(props.type);
   
   return(
     <div className="relative flex">
@@ -28,7 +34,7 @@ export default function Input(props : InputProps){
           ${props.className}`
         }
         value={props.value}
-        type="text"
+        type={type}
         placeholder={props.placeholder}
         onChange = {e => props.valueChange?.(e.target.value)}
       />
@@ -42,10 +48,10 @@ export default function Input(props : InputProps){
       
       {props.image == 'card' ? (<IdentificationCard className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>)}
       
-      {props.eye ? (
+      {showEye ? (
           <>
-            {showEye ? (<Eye className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => setShowEye(!showEye)}/>) : 
-            (<EyeSlash className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => setShowEye(!showEye)}/>)} 
+            {hiddenPassword ? (<EyeSlash className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => passwordEye('password')}/>) :
+            (<Eye className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => passwordEye('text')}/>)} 
           </> 
         ) : (<></>)       
       }
