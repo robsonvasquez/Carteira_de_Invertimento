@@ -8,7 +8,7 @@ export default function BottomBar(){
         <div className="flex justify-between pt-3 pb-5 pl-40 pr-96">
           <div className="flex flex-col">
             <div className="flex items-center">
-              <Wallet className="mr-2" color="#ffffff" size={48} weight="fill" />
+              <Wallet className="mr-1" color="#ffffff" size={48} weight="fill" />
               <h1 className={`text-white text-4xl font-bold`}>Wallet</h1>
             </div>
             <span className="text-white">Todos os direitos reservados</span>
