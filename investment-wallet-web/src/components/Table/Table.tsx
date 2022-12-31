@@ -14,6 +14,8 @@ interface TableProps{
   list: ElementProps[];
 }
 
+import colors from 'tailwindcss/colors';
+
 export default function Table(props : TableProps){
   return(
     <div className='w-full h-full flex flex-col items-end'>
@@ -34,11 +36,11 @@ export default function Table(props : TableProps){
               <div className="table-cell text-center align-middle">{l.active}</div>
               <div className="table-cell text-center align-middle">{l.currentPrice}</div>
               <div className="table-cell text-center align-middle">{l.paidPrice}</div>
-              <div className="table-cell text-center align-middle">{l.variation}</div>
+              <div className="table-cell text-center align-middle">{l.variation}%</div>
               <div className="table-cell">
                 <div className="flex justify-center items-center">
-                  <NotePencil size={24} color="#31A900" width='regular'/>
-                  <TrashSimple size={24} color="#FF0000" width='regular' />
+                  <NotePencil size={24} color={colors.lime[800]} width='regular'/>
+                  <TrashSimple size={24} color={colors.red[600]} width='regular' />
                 </div>
               </div>
             </div>  
