@@ -14,7 +14,7 @@ export default function Button(props: ButtonProps){
         `h-9 w-96
         flex justify-center items-center
         rounded text-white
-        bg-green-800 hover:bg-green-900 
+        bg-theme-color hover:bg-houver-button-color
         ${props.className}`} 
       onClick={props.onclick}>
         {props.plus ? <Plus className='mr-2' size={24} color="#ffffff" /> : (<></>)} {props.text}

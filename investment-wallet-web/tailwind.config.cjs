@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './src/**/*.tsx',
@@ -6,8 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        background: "url('/background.jpg')"
+      colors: {
+        'theme-color': '#1E5128',
+        'houver-button-color': '#1A4723',
       },
     },
   },
