@@ -27,10 +27,10 @@ export default function Input(props : InputProps){
       <input
         className={
           `h-10 w-96 p-1 mb-5 pl-9 
-          placeholder-[#1E5128]
+          placeholder-theme-color
           font-bold text-base 
           rounded-lg border-2 border-zinc-800 
-          focus:outline-none focus:ring-2 ring-green-800 focus:border-[#1E5128]
+          focus:outline-none focus:ring-2 ring-green-800 focus:border-theme-color
           ${props.className}`
         }
         value={props.value}

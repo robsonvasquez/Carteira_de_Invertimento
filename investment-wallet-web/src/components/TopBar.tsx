@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function TopBar(){
   return(
-    <div className="bg-[#1E5128] w-full h-16 m-0 px-6 flex items-center justify-between">
+    <div className="bg-theme-color w-full h-16 m-0 px-6 flex items-center justify-between">
       <List className="mr-[120px]" size={40} color="#ffffff" weight="regular" />
       <Link to='/' className="flex items-center">
         <Wallet className="mr-1" color="#ffffff" size={48} weight="fill" />

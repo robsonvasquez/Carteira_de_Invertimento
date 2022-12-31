@@ -9,7 +9,7 @@ export default function Profile(){
       <TopBar/>
       <div className="h-screen flex justify-center items-center">
         <div className="w-96 flex flex-col">
-          <h1 className={`text-[#1E5128] text-center text-5xl font-bold mb-8`}>Minha conta</h1>
+          <h1 className={`text-theme-color text-center text-5xl font-bold mb-8`}>Minha conta</h1>
           <div className="flex flex-col justify-center items-center">
             <Input image="user" placeholder="Nome"/>
             <Input image="email" placeholder="Email"/>

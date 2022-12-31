@@ -18,7 +18,7 @@ export default function Login() {
       <Link to='/'>
         <div className="flex items-center mb-8">
           <Wallet className="mr-2" color="#1E5128" size={72} weight="fill" />
-          <h1 className={`text-[#1E5128] text-6xl font-bold`}>Wallet</h1>
+          <h1 className={`text-theme-color text-6xl font-bold`}>Wallet</h1>
         </div>
       </Link>
       <div className="flex flex-col justify-center items-center">
