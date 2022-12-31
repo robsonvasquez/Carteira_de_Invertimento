@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Table from "../components/Table/Table";
 import TopBar from "../components/TopBar";
 import BottomBar from "../components/BottomBar";
+import CardResume from "../components/CardResume";
 
 const l = [
   {
@@ -47,6 +48,7 @@ export default function Home(){
           <Link to="/profile">Minha conta</Link>
           <Link to="/login">Login</Link>
         </div>
+        <CardResume/>
         <div className="w-9/12 mt-5 justify-center flex">
           <Table header={header} list={l}/>
         </div>
