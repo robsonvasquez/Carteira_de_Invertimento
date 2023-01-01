@@ -33,7 +33,7 @@ const list = [
 
 export default function CardGraph(){
   return(
-    <div className="w-10/12 my-5 p-4 flex justify-between bg-white border rounded-lg">
+    <div className="w-10/12 my-5 p-4 flex justify-between bg-white border border-gray-300 rounded-lg">
       <h1 className="mb-3 text-2xl">Carteira</h1>
       <Select
         text="text select"

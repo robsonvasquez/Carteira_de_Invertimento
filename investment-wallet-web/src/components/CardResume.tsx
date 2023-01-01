@@ -1,6 +1,6 @@
 export default function Resume(){
   return(
-    <div className="w-2/5 my-5 p-4 bg-white border rounded-lg">
+    <div className="w-2/5 my-5 p-4 bg-white border border-gray-300 rounded-lg">
       <h1 className="mb-3 text-2xl">Resumo da carteira</h1>
       <div className="flex justify-between">
         <div>
