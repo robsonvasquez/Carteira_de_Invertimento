@@ -52,7 +52,7 @@ export default function Home(){
         </div>
         <CardResume/>
         <CardGraph/>
-        <div className="flex w-10/12 justify-between items-center">
+        <div className="flex w-3/4 justify-between items-center">
           <CardActive/>
           <CardActive/>
         </div>
