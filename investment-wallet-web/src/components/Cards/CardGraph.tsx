@@ -1,5 +1,5 @@
-import Graph from "./Graphs/Graph";
-import Select from "./Select";
+import Graph from "../Graphs/Graph";
+import Select from "../Select";
 
 const list = [
   {

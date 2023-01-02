@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import Input from "../components/Input";
 import LinkGreen from "../components/LinkGreen";
-import TopBar from "../components/TopBar";
+import TopBar from "../components/Bars/TopBar";
 
 export default function Profile(){
   return(
