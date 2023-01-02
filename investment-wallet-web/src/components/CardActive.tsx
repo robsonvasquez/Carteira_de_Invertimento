@@ -1,6 +1,10 @@
 import PieGraph from "./Graphs/PieGraph";
 
-export default function CardActive(){
+interface CardActive{
+  text: string
+}
+
+export default function CardActive(props: CardActive){
 
   const data = [
     {
@@ -36,7 +40,8 @@ export default function CardActive(){
   ]
 
   return (
-    <div className="w-5/12 h-96 my-5 p-4 flex bg-white border border-gray-300 rounded-lg">
+    <div className="w-5/12 h-96 my-5 p-4 flex flex-col bg-white border border-gray-300 rounded-lg">
+      <h1 className="mb-3 text-2xl">{props.text}</h1>
       <PieGraph data={data}/>
     </div>
   );

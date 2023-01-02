@@ -53,8 +53,8 @@ export default function Home(){
         <CardResume/>
         <CardGraph/>
         <div className="flex w-3/4 justify-between items-center">
-          <CardActive/>
-          <CardActive/>
+          <CardActive text="Ações por empresa"/>
+          <CardActive text="Tipos de Ações"/>
         </div>
         <div className="w-9/12 mt-5 justify-center flex">
           <Table header={header} list={l}/>
