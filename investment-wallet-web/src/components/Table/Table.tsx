@@ -1,4 +1,4 @@
-import {NotePencil, TrashSimple} from 'phosphor-react';
+import {NotePencil, Trash} from 'phosphor-react';
 import Button from '../Button';
 
 export interface ElementProps{
@@ -40,7 +40,7 @@ export default function Table(props : TableProps){
               <div className="table-cell">
                 <div className="flex justify-center items-center">
                   <NotePencil size={24} color={colors.lime[800]} width='regular'/>
-                  <TrashSimple size={24} color={colors.red[600]} width='regular' />
+                  <Trash size={24} color={colors.red[600]} width='regular' />
                 </div>
               </div>
             </div>  
