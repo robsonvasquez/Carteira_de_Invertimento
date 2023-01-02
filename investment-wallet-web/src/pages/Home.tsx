@@ -5,6 +5,7 @@ import TopBar from "../components/TopBar";
 import BottomBar from "../components/BottomBar";
 import CardResume from "../components/CardResume";
 import CardGraph from "../components/CardGraph";
+import CardActive from "../components/CardActive";
 
 const l = [
   {
@@ -51,6 +52,10 @@ export default function Home(){
         </div>
         <CardResume/>
         <CardGraph/>
+        <div className="flex w-10/12 justify-between items-center">
+          <CardActive/>
+          <CardActive/>
+        </div>
         <div className="w-9/12 mt-5 justify-center flex">
           <Table header={header} list={l}/>
         </div>
