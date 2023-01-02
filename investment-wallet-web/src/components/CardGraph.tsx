@@ -1,6 +1,5 @@
+import Graph from "./Graphs/Graph";
 import Select from "./Select";
-
-import { ResponsiveLine } from '@nivo/line'
 
 const list = [
   {
@@ -47,7 +46,7 @@ export default function CardGraph(){
         },
         {
           "x": "Fev",
-          "y": 34
+          "y": 190
         },
         {
           "x": "Mar",
@@ -101,7 +100,7 @@ export default function CardGraph(){
         },
         {
           "x": "Fev",
-          "y": 3
+          "y": 98
         },
         {
           "x": "Mar",
@@ -155,7 +154,7 @@ export default function CardGraph(){
         },
         {
           "x": "Fev",
-          "y": 3
+          "y": 124
         },
         {
           "x": "Mar",
@@ -201,7 +200,6 @@ export default function CardGraph(){
     }
   ]
 
-
   return(
     <div className="w-10/12 my-5 p-4 flex flex-col bg-white border border-gray-300 rounded-lg">
       <div className="mb-5 flex justify-between">
@@ -212,10 +210,7 @@ export default function CardGraph(){
         />
       </div>
       <div className="flex w-full h-96">
-        <ResponsiveLine
-          data={data}
-          margin={{ top: 50, right: 60, bottom: 50, left: 60 }}
-        />
+        <Graph data={data}/>
       </div>
     </div>
   );
