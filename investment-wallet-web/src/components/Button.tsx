@@ -13,7 +13,7 @@ export default function Button(props: ButtonProps){
       className={
         `h-9 w-96
         flex justify-center items-center
-        rounded text-white
+        rounded text-white shadow
         bg-theme-color hover:bg-houver-button-color
         ${props.className}`} 
       onClick={props.onclick}>
