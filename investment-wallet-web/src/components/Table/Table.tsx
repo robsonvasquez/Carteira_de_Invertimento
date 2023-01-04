@@ -19,7 +19,7 @@ import colors from 'tailwindcss/colors';
 export default function Table(props : TableProps){
   return(
     <div className='w-full h-full flex flex-col items-end'>
-      <Button plus className='mb-5 w-48' text='Adicionar ativo'></Button>
+      <Button image='plus' className='mb-5 w-48' text='Adicionar ativo'></Button>
       <div className="table w-full border-collapse">
         <div className="table-header-group">
           <div className="table-row bg-transparent">
