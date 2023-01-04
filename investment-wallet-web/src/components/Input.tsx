@@ -30,11 +30,12 @@ export default function Input(props : InputProps){
     <div className="relative flex">
       <input
         className={
-          `h-10 w-96 p-1 mb-5 pl-9          
+          `h-10 w-96 p-1 mb-5 pl-9
           placeholder-theme-color
-          font-bold text-base 
-          rounded-lg border-2 border-zinc-800 
-          focus:outline-none focus:ring-2 ring-green-800 focus:border-theme-color`
+          font-bold text-base
+          rounded-lg border-2 border-zinc-800
+          focus:outline-none focus:ring-2 ring-green-800 focus:border-theme-color
+          ${props.className}`
         }
         type={type}
         {...props}
