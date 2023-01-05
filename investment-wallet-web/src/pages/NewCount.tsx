@@ -12,8 +12,8 @@ export default function NewCount(){
         <div className="flex flex-col justify-center items-center">
           <Input name='email' image="email" placeholder="Email"/>
           <Input name='name' image="user" placeholder="Nome"/>
-          <Input name='password' image="lock" type="password" placeholder="Senha" showEye/>
-          <Input name='check_password' image="lock" type="password" placeholder="Confirme a senha" showEye/>
+          <Input name='password' image="lock" type="password" placeholder="Senha" />
+          <Input name='check_password' image="lock" type="password" placeholder="Confirme a senha" />
 
           <span className='text-center text-sm font-bold'>
             Ao se registrar, você aceita nossos&nbsp;

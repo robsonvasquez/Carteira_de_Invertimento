@@ -15,8 +15,8 @@ export default function Profile(){
             <Input name='email' image="email" placeholder="Email"/>
             <Input name='cpf' image="card" placeholder="CPF"/>
             <Input name='phone' image="phone" placeholder="Telefone"/>
-            <Input name='password' image="lock" type="password" placeholder="Senha" showEye/>
-            <Input name='check_password' image="lock" type="password" placeholder="Confirme a senha" showEye/>
+            <Input name='password' image="lock" type="password" placeholder="Senha" />
+            <Input name='check_password' image="lock" type="password" placeholder="Confirme a senha" />
             <Button text='Salvar'/>
             <LinkGreen to='/' className='mt-5' text='Excluir minha conta.'/>
           </div>
