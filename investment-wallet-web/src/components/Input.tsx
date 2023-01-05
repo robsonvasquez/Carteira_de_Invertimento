@@ -15,22 +15,26 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
 
 export default function Input(props : InputProps){
 
-  // const[value, setValue] = useState(props.value);
+  const[value, setValue] = useState(props.value);
 
   const [hiddenPassword, setHiddenPassword] = useState(props.type == 'password' ? true : false);
-  const [type, setType] = useState(props.type);
+  const [type, setType] = useState(props.type == 'date' ? 'text' : props.type);
 
   function passwordEye(type: 'text' | 'password'){
     setType(type);
     setHiddenPassword(!hiddenPassword);
   }
 
+  console.log(props.type, type)
   return(
-    <div className="relative flex">
+    <div className="relative flex flex-col">
+      {props.value ? (<label className="ml-1 mb-1 font-semibold">{props.placeholder}</label>) : (<></>)}
       <input
         {...props}
+        onFocus={props.type == 'date' ? (() => setType('date')) : (() => setType(props.type))}
+        onBlur={props.type == 'date' ? (() => setType('text')) : (() => setType(props.type))}
         className={
-          `h-10 w-96 p-1 mb-5 pl-9
+          `h-10 w-96 p-1 mb-5 ${props.image == undefined ? ('pl-2'): ('pl-9')}
           placeholder-theme-color
           font-bold text-base
           rounded-lg border-2 border-zinc-800
@@ -38,6 +42,7 @@ export default function Input(props : InputProps){
           ${props.className}`
         }
         type={type}
+        value={value}
       />
       {props.image == 'user' ? (<User className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
      
