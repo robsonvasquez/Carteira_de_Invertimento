@@ -34,7 +34,9 @@ export default function Table(props : TableProps){
             <div className="table-cell text-center align-middle">{l.active}</div>
             <div className="table-cell text-center align-middle">{l.currentPrice}</div>
             <div className="table-cell text-center align-middle">{l.paidPrice}</div>
-            <div className="table-cell text-center align-middle">{l.variation}%</div>
+            <div className={`table-cell text-center align-middle ${l.variation > 0 ? ('text-lime-800') : ('text-red-600')}`}>
+              {Math.abs(l.variation)}%
+            </div>
             <div className="table-cell">
               <div className="flex justify-center items-center">
                 <NotePencil size={24} color={colors.lime[800]} width='regular'/>

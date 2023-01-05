@@ -14,7 +14,7 @@ const l = [
     active: 'Poupança',
     currentPrice: 10,
     paidPrice: 20,
-    variation: 2,
+    variation: -2,
   },    
   {
     id: 2,
@@ -28,14 +28,14 @@ const l = [
     active: 'Poupança',
     currentPrice: 10,
     paidPrice: 20,
-    variation: 2,
+    variation: -24,
   },
   {
     id: 4,
     active: 'Poupança',
     currentPrice: 10,
     paidPrice: 20,
-    variation: 2,
+    variation: 7,
   }
 ]
 
