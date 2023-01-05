@@ -1,17 +1,17 @@
 import {
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
+  // createBrowserRouter,
+  // createRoutesFromElements,
+  // RouterProvider,
   Route,
   Routes,
 } from "react-router-dom";
-
 
 import Login from './pages/Login'
 import User from './pages/User'
 import Home from './pages/Home';
 import NewCount from './pages/NewCount';
 import Profile from "./pages/Profile";
+import NewActive from "./pages/NewActive";
 
 // const router = createBrowserRouter([
 //   {
@@ -42,10 +42,11 @@ export default function Router(){
     // <RouterProvider router={router}/>
     <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path='/user' element={<User/>}/> 
+      <Route path='/user' element={<User/>}/>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/newcount' element={<NewCount/>}/> 
-      <Route path='/profile' element={<Profile/>}/> 
+      <Route path='/newcount' element={<NewCount/>}/>
+      <Route path='/profile' element={<Profile/>}/>
+      <Route path='/newactive' element={<NewActive/>}/> 
     </Routes>
   );
 }
