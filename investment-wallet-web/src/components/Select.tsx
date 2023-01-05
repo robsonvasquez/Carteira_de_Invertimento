@@ -3,8 +3,9 @@ import { useState } from 'react';
 import colors from 'tailwindcss/colors'
 
 interface optionInterface{
+  id: number
   value: string | number;
-  key: string;
+  option: string;
 }
 interface SelectProps{
   text: string;
@@ -24,7 +25,7 @@ export default function Select(props: SelectProps){
         onPointerOut={e => setCaret(false)}
       >
         {props.options.map((op: optionInterface) => (
-          <option value={op.value}>{op.key}</option>
+          <option key={op.id} value={op.value}>{op.option}</option>
         ))}
       </select>
       {caret ?

@@ -3,32 +3,39 @@ import Select from "../Select";
 
 const list = [
   {
+    id: 1,
     value: '1',
-    key:'1 dia',
+    option:'1 dia',
   },
   {
+    id: 2,
     value: '7',
-    key:'7 dias',
+    option:'7 dias',
   },
   {
+    id: 3,
     value: '14',
-    key:'2 semanas',
+    option:'2 semanas',
   },
   {
+    id: 4,
     value: '30',
-    key:'1 mês',
+    option:'1 mês',
   },
   {
+    id: 5,
     value: '90',
-    key:'3 meses',
+    option:'3 meses',
   },
   {
+    id: 6,
     value: '180',
-    key:'6 meses',
+    option:'6 meses',
   },
   {
+    id: 7,
     value: '356',
-    key:'1 ano',
+    option:'1 ano',
   },
 ] 
 
