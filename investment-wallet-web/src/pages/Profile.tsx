@@ -11,12 +11,12 @@ export default function Profile(){
         <div className="w-96 flex flex-col">
           <h1 className={`text-theme-color text-center text-5xl font-bold mb-8`}>Minha conta</h1>
           <div className="flex flex-col justify-center items-center">
-            <Input image="user" placeholder="Nome"/>
-            <Input image="email" placeholder="Email"/>
-            <Input image="card" placeholder="CPF"/>
-            <Input image="phone" placeholder="Telefone"/>
-            <Input image="lock" type="password" placeholder="Senha"/>
-            <Input image="lock" type="password" placeholder="Confirme a senha"/>
+            <Input name='name' image="user" placeholder="Nome"/>
+            <Input name='email' image="email" placeholder="Email"/>
+            <Input name='cpf' image="card" placeholder="CPF"/>
+            <Input name='phone' image="phone" placeholder="Telefone"/>
+            <Input name='password' image="lock" type="password" placeholder="Senha" showEye/>
+            <Input name='check_password' image="lock" type="password" placeholder="Confirme a senha" showEye/>
             <Button text='Salvar'/>
             <LinkGreen to='/' className='mt-5' text='Excluir minha conta.'/>
           </div>

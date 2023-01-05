@@ -10,10 +10,10 @@ export default function NewCount(){
       <div className="w-96 flex flex-col">
         <h1 className={`text-theme-color text-center text-5xl font-bold mb-8`}>Crie sua conta</h1>
         <div className="flex flex-col justify-center items-center">
-          <Input image="email" placeholder="Email"/>
-          <Input image="user" placeholder="Nome"/>
-          <Input image="lock" type="password" placeholder="Senha"/>
-          <Input image="lock" type="password" placeholder="Confirme a senha"/>
+          <Input name='email' image="email" placeholder="Email"/>
+          <Input name='name' image="user" placeholder="Nome"/>
+          <Input name='password' image="lock" type="password" placeholder="Senha" showEye/>
+          <Input name='check_password' image="lock" type="password" placeholder="Confirme a senha" showEye/>
 
           <span className='text-center text-sm font-bold'>
             Ao se registrar, você aceita nossos&nbsp;
