@@ -6,6 +6,7 @@ import BottomBar from "../components/Bars/BottomBar";
 import CardResume from "../components/Cards/CardResume";
 import CardGraph from "../components/Cards/CardGraph";
 import CardActive from "../components/Cards/CardActive";
+import Button from "../components/Button";
 
 const l = [
   {
@@ -56,7 +57,8 @@ export default function Home(){
           <CardActive text="Ações por empresa"/>
           <CardActive text="Tipos de Ações"/>
         </div>
-        <div className="w-9/12 mt-5 justify-center flex">
+        <div className="w-9/12 mt-5 flex flex-col items-end">
+          <Button image='plus' className='mb-5 w-48' text='Adicionar ativo'/>
           <Table header={header} list={l}/>
         </div>
       </div>
