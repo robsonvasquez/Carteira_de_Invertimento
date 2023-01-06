@@ -6,7 +6,7 @@ import BottomBar from "../components/Bars/BottomBar";
 import CardResume from "../components/Cards/CardResume";
 import CardGraph from "../components/Cards/CardGraph";
 import CardActive from "../components/Cards/CardActive";
-import Button from "../components/Button";
+import Button from "../components/form/Button";
 
 const l = [
   {

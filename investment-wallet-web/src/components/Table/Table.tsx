@@ -1,5 +1,5 @@
 import {NotePencil, Trash} from 'phosphor-react';
-import Button from '../Button';
+import Button from '../form/Button';
 
 export interface ElementProps{
   id: number,

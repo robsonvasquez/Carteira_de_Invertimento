@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Wallet } from "phosphor-react";
 
-import Button from '../components/Button';
+import Button from '../components/form/Button';
 import LinkGreen from "../components/LinkGreen";
 import Form from "../components/form/Form";
 import {formLogin} from "../components/form/TypeForms";
@@ -41,19 +41,12 @@ export default function Login() {
         </div>
       </Link>
       <div className="flex flex-col justify-center items-center">
-        <Form inputs={formLogin}/>
-        {/* <form onSubmit={handleSubmit}>
-          <Input name='email' image="email" type='email' placeholder="Email" />
-          <Input name='password' image="lock" type="password" placeholder="Senha"/>
-        </form> */}
-        <Button text='Entrar' type='submit'/>
+        <Form inputs={formLogin} button="Entrar" />
         <LinkGreen to='/' className='mt-5' text='Esqueceu sua Senha?'/>
         <Link to={'/newcount'}>
           <Button className='w-60 mt-8' text='Criar nova conta'/>
         </Link>  
       </div>
-    </div>
-    
+    </div>    
   );
-
 }

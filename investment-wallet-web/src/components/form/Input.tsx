@@ -17,7 +17,7 @@ export default function Input(props : InputProps){
     setType(type);
     setHiddenPassword(!hiddenPassword);
   }
-
+  
   return(
     <div className="relative flex flex-col">
       {props.value ? (<label className="ml-1 mb-1 font-semibold">{props.placeholder}</label>) : (<></>)}

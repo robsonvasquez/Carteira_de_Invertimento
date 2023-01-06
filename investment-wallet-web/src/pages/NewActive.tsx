@@ -1,5 +1,5 @@
 import TopBar from "../components/Bars/TopBar";
-import Input from "../components/Input";
+import Input from "../components/form/Input";
 
 export default function NewActive(){
   return(
