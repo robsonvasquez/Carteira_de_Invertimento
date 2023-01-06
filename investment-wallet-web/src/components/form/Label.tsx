@@ -3,6 +3,6 @@ interface LabelProps{
 }
 export default function Label(props : LabelProps){
   return(
-    <label>{props.label}</label>
+    <label className="text-black">{props.label}</label>
   );
 }

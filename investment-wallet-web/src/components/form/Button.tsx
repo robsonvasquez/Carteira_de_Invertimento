@@ -1,4 +1,5 @@
 import {ButtonHTMLAttributes} from 'react';
+import colors from 'tailwindcss/colors';
 import {Plus} from 'phosphor-react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
@@ -18,7 +19,7 @@ export default function Button(props: ButtonProps){
         ${props.className}`
       } 
       >
-        {props.image == 'plus' ? <Plus className='mr-2' size={24} color="#ffffff" /> : (<></>)}
+        {props.image == 'plus' ? <Plus className='mr-2' size={24} color={colors.white} /> : (<></>)}
         {props.text}
     </button>
   );

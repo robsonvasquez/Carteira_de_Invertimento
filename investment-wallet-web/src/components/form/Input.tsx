@@ -1,5 +1,5 @@
-import { InputHTMLAttributes } from "react";
-import { useState } from "react";
+import { useState, InputHTMLAttributes } from "react";
+import colors from "tailwindcss/colors";
 import { User, LockSimple, EnvelopeSimple, Eye, EyeSlash, Phone, IdentificationCard, Password } from "phosphor-react";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
@@ -37,20 +37,20 @@ export default function Input(props : InputProps){
         value={value}
         onChange={(e => setValue(e.target.value))}
       />
-      {props.image == 'user' ? (<User className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
+      {props.image == 'user' ? (<User className="absolute ml-2 mt-2" size={24} color={colors.black} weight="regular" />) : (<></>) }
      
-      {props.image == 'email' ? (<EnvelopeSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
+      {props.image == 'email' ? (<EnvelopeSimple className="absolute ml-2 mt-2" size={24} color={colors.black} weight="regular" />) : (<></>) }
 
-      {props.image == 'lock' ? (<LockSimple className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
+      {props.image == 'lock' ? (<LockSimple className="absolute ml-2 mt-2" size={24} color={colors.black} weight="regular" />) : (<></>) }
 
-      {props.image == 'phone' ? (<Phone className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>)}
+      {props.image == 'phone' ? (<Phone className="absolute ml-2 mt-2" size={24} color={colors.black} weight="regular" />) : (<></>)}
       
-      {props.image == 'card' ? (<IdentificationCard className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>)}
+      {props.image == 'card' ? (<IdentificationCard className="absolute ml-2 mt-2" size={24} color={colors.black} weight="regular" />) : (<></>)}
       
       {props.type == 'password' ? (
           <>
-            {hiddenPassword ? (<Eye className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => passwordEye('text')}/>) :
-              (<EyeSlash className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => passwordEye('password')}/>)
+            {hiddenPassword ? (<Eye className="absolute right-0 mr-2 mt-2" size={24} color={colors.black} weight="regular" onClick={() => passwordEye('text')}/>) :
+              (<EyeSlash className="absolute right-0 mr-2 mt-2" size={24} color={colors.black} weight="regular" onClick={() => passwordEye('password')}/>)
             }
           </>
         ) : (<></>)
