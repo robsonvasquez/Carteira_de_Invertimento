@@ -2,21 +2,14 @@ import { InputHTMLAttributes } from "react";
 import { useState } from "react";
 import { User, LockSimple, EnvelopeSimple, Eye, EyeSlash, Phone, IdentificationCard, Password } from "phosphor-react";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
-  // name: string
-  // value?: any
-  // type?: 'text' | 'number' | 'password' | 'email'
-  // read?: boolean
-  // placeholder: string
-  // valueChange?: (value: any) => void
-  // className?: string
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
   image?: string
 }
 
 export default function Input(props : InputProps){
 
   const[value, setValue] = useState(props.value);
-
+  
   const [hiddenPassword, setHiddenPassword] = useState(props.type == 'password' ? true : false);
   const [type, setType] = useState(props.type == 'date' ? 'text' : props.type);
 
@@ -25,7 +18,6 @@ export default function Input(props : InputProps){
     setHiddenPassword(!hiddenPassword);
   }
 
-  console.log(props.type, type)
   return(
     <div className="relative flex flex-col">
       {props.value ? (<label className="ml-1 mb-1 font-semibold">{props.placeholder}</label>) : (<></>)}
@@ -43,6 +35,7 @@ export default function Input(props : InputProps){
         }
         type={type}
         value={value}
+        onChange={(e => setValue(e.target.value))}
       />
       {props.image == 'user' ? (<User className="absolute ml-2 mt-2" size={24} color="#000000" weight="regular" />) : (<></>) }
      
@@ -58,9 +51,9 @@ export default function Input(props : InputProps){
           <>
             {hiddenPassword ? (<Eye className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => passwordEye('text')}/>) :
               (<EyeSlash className="absolute right-0 mr-2 mt-2" size={24} color="#000000" weight="regular" onClick={() => passwordEye('password')}/>)
-            } 
-          </> 
-        ) : (<></>)       
+            }
+          </>
+        ) : (<></>)
       }
       
     </div>
