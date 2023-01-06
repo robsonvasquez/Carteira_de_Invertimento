@@ -45,12 +45,7 @@ export default function Home(){
   return(
     <div className="w-auto h-full flex flex-col items-center">
       <TopBar/>
-      <div className="w-full p-8 flex flex-col items-center">
-        <div className="w-full bg-white border border-gray-300 rounded-lg flex justify-between p-3">
-          <Link to="/user">Usuário</Link>
-          <Link to="/profile">Minha conta</Link>
-          <Link to="/login">Login</Link>
-        </div>
+      <div className="w-full flex flex-col items-center">
         <CardResume/>
         <CardGraph/>
         <div className="flex w-3/4 justify-between items-center">
