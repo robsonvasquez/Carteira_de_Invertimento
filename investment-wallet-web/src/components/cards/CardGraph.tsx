@@ -1,4 +1,4 @@
-import Graph from "../Graphs/Graph";
+import Graph from "../graphs/Graph";
 import Select from "../Select";
 
 const list = [

@@ -1,4 +1,4 @@
-import PieGraph from "../Graphs/PieGraph";
+import PieGraph from "../graphs/PieGraph";
 
 interface CardActive{
   text: string

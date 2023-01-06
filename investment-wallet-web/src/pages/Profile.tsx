@@ -1,5 +1,5 @@
 import LinkGreen from "../components/LinkGreen";
-import TopBar from "../components/Bars/TopBar";
+import TopBar from "../components/bars/TopBar";
 import { formProfile } from "../components/form/TypeForms";
 import Form from "../components/form/Form";
 

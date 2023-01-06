@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-import Table from "../components/Table/Table";
-import TopBar from "../components/Bars/TopBar";
-import BottomBar from "../components/Bars/BottomBar";
-import CardResume from "../components/Cards/CardResume";
-import CardGraph from "../components/Cards/CardGraph";
-import CardActive from "../components/Cards/CardActive";
+import Table from "../components/table/Table";
+import TopBar from "../components/bars/TopBar";
+import BottomBar from "../components/bars/BottomBar";
+import CardResume from "../components/cards/CardResume";
+import CardGraph from "../components/cards/CardGraph";
+import CardActive from "../components/cards/CardActive";
 import Button from "../components/form/Button";
 
 const l = [

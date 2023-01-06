@@ -1,4 +1,4 @@
-import TopBar from "../components/Bars/TopBar";
+import TopBar from "../components/bars/TopBar";
 import Form from "../components/form/Form";
 import { formNewActive } from "../components/form/TypeForms";
 
