@@ -90,3 +90,48 @@ export const formNewActive = [
     type: 'number',
   },
 ]
+
+export const formProfile = [
+  {
+    key: 1,
+    name: 'name',
+    placeholder: 'Nome',
+    type: 'text',
+    image: 'user',
+  },
+  {
+    key: 2,
+    name: 'email',
+    placeholder: 'Email',
+    type: 'email',
+    image: 'email',
+  },
+  {
+    key: 3,
+    name: 'cpf',
+    placeholder: 'CPF',
+    type: 'text',
+    image: 'card',
+  },
+  {
+    key: 4,
+    name: 'phone',
+    placeholder: 'Telefone',
+    type: 'text',
+    image: 'phone',
+  },
+  {
+    key: 5,
+    name: 'password',
+    placeholder: 'Senha',
+    type: 'password',
+    image: 'lock',
+  },
+  {
+    key: 6,
+    name: 'check_password',
+    placeholder: 'Confirme a senha',
+    type: 'password',
+    image: 'lock',
+  },
+]

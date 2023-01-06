@@ -1,7 +1,7 @@
-import Button from "../components/form/Button";
-import Input from "../components/form/Input";
 import LinkGreen from "../components/LinkGreen";
 import TopBar from "../components/Bars/TopBar";
+import { formProfile } from "../components/form/TypeForms";
+import Form from "../components/form/Form";
 
 export default function Profile(){
   return(
@@ -11,13 +11,7 @@ export default function Profile(){
         <div className="w-96 flex flex-col">
           <h1 className={`text-theme-color text-center text-5xl font-bold mb-8`}>Minha conta</h1>
           <div className="flex flex-col justify-center items-center">
-            <Input name='name' image="user" placeholder="Nome"/>
-            <Input name='email' image="email" placeholder="Email"/>
-            <Input name='cpf' image="card" placeholder="CPF"/>
-            <Input name='phone' image="phone" placeholder="Telefone"/>
-            <Input name='password' image="lock" type="password" placeholder="Senha" />
-            <Input name='check_password' image="lock" type="password" placeholder="Confirme a senha" />
-            <Button text='Salvar'/>
+            <Form inputs={formProfile} button="Salvar"/>
             <LinkGreen to='/' className='mt-5' text='Excluir minha conta.'/>
           </div>
         </div>
