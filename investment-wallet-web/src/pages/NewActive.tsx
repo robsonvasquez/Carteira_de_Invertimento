@@ -1,5 +1,6 @@
 import TopBar from "../components/Bars/TopBar";
-import Input from "../components/form/Input";
+import Form from "../components/form/Form";
+import { formNewActive } from "../components/form/TypeForms";
 
 export default function NewActive(){
   return(
@@ -9,13 +10,7 @@ export default function NewActive(){
         <div className="w-96 flex flex-col">
           <h1 className={`text-theme-color text-center text-5xl font-bold mb-8`}>Cadastrar ativo</h1>
           <div className="flex flex-col justify-center items-center">
-            <Input name='active' type='text' placeholder="Ativo"/>
-            <Input name='date' type='date' placeholder="Data da Compra"/>
-            <Input name='institution' type='text' placeholder="Instituição da compra"/>
-            <Input name='amount' type='number' placeholder="Quantidade"/>
-            <Input name='paidPrice' type='number' placeholder="Valor Pago"/>
-            <Input name='investedPrice' type='number' placeholder="Valor investido"/>
-            <Input name='brokerageRate' type='number' placeholder="Taxa de corretagem (opcional)"/>
+            <Form inputs={formNewActive} button="Cadastrar ativo"/>
           </div>
         </div>
       </div>
