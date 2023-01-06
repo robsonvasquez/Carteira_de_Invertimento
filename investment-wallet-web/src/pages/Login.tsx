@@ -6,7 +6,6 @@ import LinkGreen from "../components/LinkGreen";
 import Form from "../components/form/Form";
 import {formLogin} from "../components/form/TypeForms";
 
-
 export default function Login() {
   
   // const [login, setlogin] = useState('')
