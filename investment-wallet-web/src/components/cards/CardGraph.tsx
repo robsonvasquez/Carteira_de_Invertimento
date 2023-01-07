@@ -1,5 +1,7 @@
 import Graph from "../graphs/Graph";
 import Select from "../Select";
+import Select2 from "../Select2";
+import Select3 from "../Select3";
 
 const list = [
   {
@@ -8,32 +10,37 @@ const list = [
     option:'1 dia',
   },
   {
-    id: 2,
-    value: '7',
-    option:'7 dias',
+    id: 3,
+    value: '3',
+    option:'3 dias',
   },
   {
-    id: 3,
+    id: 4,
+    value: '7',
+    option:'1 semana',
+  },
+  {
+    id: 5,
     value: '14',
     option:'2 semanas',
   },
   {
-    id: 4,
+    id: 6,
     value: '30',
     option:'1 mês',
   },
   {
-    id: 5,
+    id: 7,
     value: '90',
     option:'3 meses',
   },
   {
-    id: 6,
+    id: 8,
     value: '180',
     option:'6 meses',
   },
   {
-    id: 7,
+    id: 9,
     value: '356',
     option:'1 ano',
   },
@@ -212,9 +219,10 @@ export default function CardGraph(){
       <div className="mb-5 flex justify-between">
         <h1 className="mb-3 text-2xl">Carteira</h1>
         <Select
-          text="text select"
           options={list}
         />
+        <Select2/>
+        <Select3/>
       </div>
       <div className="flex w-full h-96">
         <Graph data={data}/>

@@ -8,17 +8,19 @@ interface optionInterface{
   option: string;
 }
 interface SelectProps{
-  text: string;
   options: optionInterface[];
 }
 export default function Select(props: SelectProps){
-  const [caret, setCaret]  = useState(false)
+  
+  const [selected, setSelected] = useState(props.options[1].id)
+  const [caret, setCaret] = useState(false)
 
+  // console.log(selected);
   return(
-    <div className='relative h-6 flex justify-end items-center'>
+    <div className='relative h-9 flex justify-end items-center'>
       <select 
         className='
-          pl-2 pr-8 appearance-none bg-white border border-gray-300 
+          h-full pl-2 pr-8 appearance-none bg-white border border-gray-300 
         hover:border-gray-500 rounded-lg shadow focus:outline-none'
         onPointerDown={e => setCaret(!caret)}
         onPointerUp={e => setCaret(false)}
