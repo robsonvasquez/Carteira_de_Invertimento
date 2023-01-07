@@ -1,4 +1,4 @@
-import {NotePencil, Trash} from 'phosphor-react';
+import {NotePencil, Trash, ArrowUp, ArrowDown } from 'phosphor-react';
 
 export interface ElementProps{
   id: number,
@@ -17,34 +17,30 @@ import colors from 'tailwindcss/colors';
 
 export default function Table(props : TableProps){
   return(  
-    <div className="table w-full h-full border-collapse">
-      <div className="table-header-group">
-        <div className="table-row bg-transparent">
+    
+      <table className='w-full rounded-xl font-semibold'>
+        <tr className="flex justify-around ">
           {props.header.map((h : string) => (
-            <div className="table-cell text-center" >
-              {h} 
-            </div>
+            <td className='text-center w-1/5'>{h}</td>
           ))}
-        </div>
-      </div>
-      <div className="table-row-group divide-y divide-zinc-200">
-        {props.list.map((l : ElementProps) => (
-          <div className="table-row bg-white">
-            <div className="table-cell text-center align-middle">{l.active}</div>
-            <div className="table-cell text-center align-middle">{l.currentPrice}</div>
-            <div className="table-cell text-center align-middle">{l.paidPrice}</div>
-            <div className={`table-cell text-center align-middle ${l.variation > 0 ? ('text-lime-800') : ('text-red-600')}`}>
-              {Math.abs(l.variation)}%
-            </div>
-            <div className="table-cell">
-              <div className="flex justify-center items-center">
-                <NotePencil size={24} color={colors.lime[800]} width='regular'/>
-                <Trash size={24} color={colors.red[600]} width='regular' />
-              </div>
-            </div>
-          </div>  
-        ))}  
-      </div>
-    </div>
+        </tr>
+        
+          {props.list.map((l : ElementProps) => (
+            <tr className='bg-white flex border border-zinc-300 rounded-xl p-2 m-2'>
+              <td className='text-center w-1/5'>{l.active}</td>
+              <td className='text-center w-1/5'>{l.currentPrice}</td>
+              <td className='text-center w-1/5'>{l.paidPrice}</td>
+              <td className={`flex flex-row justify-center w-1/5 ${l.variation > 0 ? ('text-lime-800') : ('text-red-600')}`}> 
+                {l.variation > 0 ? <ArrowUp size={22} /> : <ArrowDown size={22} />} 
+                {Math.abs(l.variation)}%
+              </td>
+              <td className="flex justify-center gap-3 w-1/5">
+                <NotePencil size={25} color={colors.lime[800]}/>
+                <Trash size={25} color={colors.red[600]}/>
+              </td>
+            </tr>
+          ))}
+      </table>
+    
   );
 }
