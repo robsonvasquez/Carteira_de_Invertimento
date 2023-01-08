@@ -53,8 +53,8 @@ export default function Home(){
           <CardActive text="Tipos de Ações"/>
         </div>
         <div className="w-9/12 mt-5 flex flex-col items-end">
-          <Link to="/newactive">
-            <Button image='plus' className='mb-5 w-48' text='Adicionar ativo'/>
+          <Link to="/newactive" className="mb-5">
+            <Button image='plus' className='w-52' text='Adicionar ativo'/>
           </Link>
           <Table header={header} list={l}/>
         </div>
