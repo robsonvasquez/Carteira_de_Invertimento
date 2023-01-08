@@ -1,5 +1,5 @@
 import Graph from "../graphs/Graph";
-import Select from "../Select";
+import Select from "../form/Select";
 
 const list = [
   {
