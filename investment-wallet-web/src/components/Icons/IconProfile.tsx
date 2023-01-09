@@ -3,18 +3,24 @@ import colors from "tailwindcss/colors";
 import { CaretUp, Gear, SignOut, Triangle, UserCircle } from "phosphor-react";
 import { Link } from "react-router-dom";
 
-export default function IconProfile(){
+interface IconProfileProps{
+  size: number;
+  className?: string;
+}
+
+export default function IconProfile(props: IconProfileProps){
 
   const [iconWeight, setIconWeigth] = useState(false)
   const [showOptions, setShowOptions] = useState(false)
 
   return(
     <button 
-      className="relative w-11 h-11 rounded-full"
+      className={`relative rounded-full focus:outline-none ${props.className}`}
+      // onFocus={e => setIconWeigth(true)}
       onClick={e => (setIconWeigth(!iconWeight), setShowOptions(!showOptions))}
       onBlur={e => (setIconWeigth(false), setShowOptions(false))}
     >
-      <UserCircle size={48} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }/>
+      <UserCircle size={props.size} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }/>
         <div className={`
           absolute -right-4 top-14 z-50
           ${showOptions ? 'visible' : 'invisible hidden'}`}
