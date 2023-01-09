@@ -1,14 +1,14 @@
 import { useState } from "react";
 import colors from "tailwindcss/colors";
-import { PlusCircle } from "phosphor-react";
+import { List } from "phosphor-react";
 
-interface IconPlusProps{
-  size: number;
+interface IconListProps{
   className?: string;
+  size: number
 }
 
-export default function IconPlus(props: IconPlusProps){
-
+export default function IconLIst(props: IconListProps){
+  
   const [iconWeight, setIconWeigth] = useState(false)
   const [showOptions, setShowOptions] = useState(false)
   
@@ -19,7 +19,7 @@ export default function IconPlus(props: IconPlusProps){
       onClick={e => (setIconWeigth(!iconWeight), setShowOptions(!showOptions))}
       onBlur={e => (setIconWeigth(false), setShowOptions(false))}
     >
-      <PlusCircle size={props.size} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }/>
+      <List size={props.size} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }/>
         <div className={`
           absolute -right-4 top-14 z-50
           ${showOptions ? 'visible' : 'invisible hidden'}`}
