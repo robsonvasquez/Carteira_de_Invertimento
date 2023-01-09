@@ -40,7 +40,7 @@ export default function Login() {
         </div>
       </Link>
       <div className="flex flex-col justify-center items-center">
-        <Form inputs={formLogin} button="Entrar" />
+        <Form inputs={formLogin} type='login' button="Entrar" />
         <LinkGreen to='/' className='mt-5' text='Esqueceu sua Senha?'/>
         <Link to={'/newcount'}>
           <Button className='w-60 mt-8' text='Criar nova conta'/>

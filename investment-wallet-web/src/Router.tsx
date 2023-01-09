@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import NewCount from './pages/NewCount';
 import Profile from "./pages/Profile";
 import NewActive from "./pages/NewActive";
+import { ProtecteLayout } from "./components/ProtecteLayout";
 
 // const router = createBrowserRouter([
 //   {
@@ -41,12 +42,12 @@ export default function Router(){
   return(
     // <RouterProvider router={router}/>
     <Routes>
-      <Route path='/' element={<Home/>}/>
-      <Route path='/user' element={<User/>}/>
+      <Route path='/' element={<ProtecteLayout><Home/></ProtecteLayout>}/>
+      <Route path='/user' element={<ProtecteLayout><User/></ProtecteLayout>}/>
+      <Route path='/newcount' element={<ProtecteLayout><NewCount/></ProtecteLayout>}/>
+      <Route path='/profile' element={<ProtecteLayout><Profile/></ProtecteLayout>}/>
+      <Route path='/newactive' element={<ProtecteLayout><NewActive/></ProtecteLayout>}/>
       <Route path='/login' element={<Login/>}/>
-      <Route path='/newcount' element={<NewCount/>}/>
-      <Route path='/profile' element={<Profile/>}/>
-      <Route path='/newactive' element={<NewActive/>}/> 
     </Routes>
   );
 }
