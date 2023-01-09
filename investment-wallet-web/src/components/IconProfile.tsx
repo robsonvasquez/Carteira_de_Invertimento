@@ -1,43 +1,43 @@
-import colors from "tailwindcss/colors";
-import { Gear, UserCircle, SignOut } from "phosphor-react";
-
-import { Dropdown, MenuProps } from 'antd';
-import { Link } from "react-router-dom";
 import { useState } from "react";
-
-const items: MenuProps['items'] = [
-  {
-    key: '0',
-    label: <Link className="flex items-center gap-2 m-1 mx-1" to="/profile">
-              <Gear size={24} color={colors.gray[700]} weight="regular" />
-              <div className="text-black font-semibold text-lg ">
-                Minha conta
-              </div>
-            </Link>,
-  },
-  {
-    type: 'divider',
-  },
-  {
-    key: '1',
-    label: <Link className="flex items-center gap-2 m-1 mx-1" to="/login">
-              <SignOut size={24} color={colors.red[600]} weight="duotone" />
-              <div className="text-red-600 font-semibold text-lg ">
-                Sair
-              </div>
-            </Link>,
-  },
-];
+import colors from "tailwindcss/colors";
+import { CaretUp, Gear, SignOut, Triangle, UserCircle } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 export default function IconProfile(){
 
-  const [iconWeight,setIconWeigth] = useState(false)
-  
+  const [iconWeight, setIconWeigth] = useState(false)
+  const [showOptions, setShowOptions] = useState(false)
+
   return(
-    <Dropdown className="flex items-center" menu={{ items }} placement="topRight" trigger={['click']} arrow={{ pointAtCenter: true }} >
-      <button className="w-14 h-14 rounded-full" onClick={e => setIconWeigth(!iconWeight)} onBlur={e => setIconWeigth(false)}>
-        <UserCircle size={48} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }/>
-      </button>
-    </Dropdown>
+    <button 
+      className="relative w-11 h-11 rounded-full"
+      onClick={e => (setIconWeigth(!iconWeight), setShowOptions(!showOptions))}
+      onBlur={e => (setIconWeigth(false), setShowOptions(false))}
+    >
+      <UserCircle size={48} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }/>
+        <div className={`
+          absolute -right-4 top-14 z-50
+          ${showOptions ? 'visible' : 'invisible hidden'}`}
+        >
+          <div className={`
+            flex flex-col p-1 
+            gap-1 bg-white 
+            border border-gray-300 rounded-lg`}
+          >
+            <Link className="w-full flex items-center justify-start gap-2 px-4 hover:bg-sky-100 rounded-lg" to="/profile">
+              <Gear size={24} color={colors.gray[700]} weight="regular" />
+              <span className="truncate text-black font-semibold text-lg leading-10">
+                Minha conta
+              </span>
+            </Link>
+            <Link className="w-full flex items-center justify-start gap-2 px-4 hover:bg-sky-100 rounded-lg" to="/login">
+              <SignOut size={24} color={colors.red[600]} weight="duotone" />
+              <span className="truncate text-red-600 font-semibold text-lg leading-10">
+                Sair
+              </span>
+            </Link>
+        </div>
+      </div>
+    </button>
   );
 }
