@@ -46,13 +46,13 @@ export default function Select(props: SelectProps){
                 border border-gray-300 rounded-lg'
             >
               {props.options.map((op: optionInterface) => (
-                <div 
+                <span 
                   className={`pl-2 rounded hover:bg-sky-100 ${selected.id == op.id ? 'bg-blue-200' : '' }`}
                   onClick={e => (setSelected(op), setShowOption(false))} 
                   key={op.id}
                 >
                   {op.option}
-                </div>
+                </span>
               ))}
             </div>) : (<></>)
           }
