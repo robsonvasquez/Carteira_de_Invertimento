@@ -9,7 +9,7 @@ import IconList from "../Icons/IconList";
 
 export default function TopBar(){
   return(
-    <div className="bg-theme-color w-full h-16 px-5 flex items-center justify-between">
+    <div className="bg-theme-color w-full max-h-16 px-5 flex items-center justify-between">
       <IconList className="mr-[152px]" size={44}/>
       <Link to='/' className="flex items-center h-full">
         <Wallet className="mr-1" color={colors.white} size={52} weight="fill" />

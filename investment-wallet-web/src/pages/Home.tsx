@@ -43,7 +43,7 @@ const header = ['Ativo', 'Preço pago', 'Preço Atual', 'Variação', 'Opções'
 
 export default function Home(){
   return(
-    <div className="w-auto h-full flex flex-col items-center">
+    <div className="w-full h-full flex flex-col items-center">
       <TopBar/>
       <div className="w-full flex flex-col items-center">
         <CardResume balance={25} appliedValue={500} title={"Resume da Carteira"} profitability={100}/>
