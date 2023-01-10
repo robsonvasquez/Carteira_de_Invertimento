@@ -44,10 +44,10 @@ export default function Router(){
     <Routes>
       <Route path='/' element={<ProtecteLayout><Home/></ProtecteLayout>}/>
       <Route path='/user' element={<ProtecteLayout><User/></ProtecteLayout>}/>
-      <Route path='/newcount' element={<ProtecteLayout><NewCount/></ProtecteLayout>}/>
       <Route path='/profile' element={<ProtecteLayout><Profile/></ProtecteLayout>}/>
       <Route path='/newactive' element={<ProtecteLayout><NewActive/></ProtecteLayout>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/newcount' element={<NewCount/>}/>
     </Routes>
   );
 }
