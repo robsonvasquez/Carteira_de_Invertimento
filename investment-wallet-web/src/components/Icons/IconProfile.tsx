@@ -26,7 +26,7 @@ export default function IconProfile(props: IconProfileProps){
   return(
     <button
       onClick={e => (setIconWeigth(!iconWeight), setShowOptions(!showOptions))} 
-      onBlur={e => (setIconWeigth(!iconWeight), setShowOptions(false))} 
+      onBlur={e => (setIconWeigth(false), setShowOptions(false))} 
       className="flex flex-col items-end" >
 
       <UserCircle  
