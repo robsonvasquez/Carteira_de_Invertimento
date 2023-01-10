@@ -46,7 +46,7 @@ export default function Home(){
     <div className="w-auto h-full flex flex-col items-center">
       <TopBar/>
       <div className="w-full flex flex-col items-center">
-        <CardResume/>
+        <CardResume balance={25} appliedValue={500} title={"Resume da Carteira"} profitability={100}/>
         <CardGraph/>
         <div className="flex w-3/4 justify-between items-center">
           <CardActive text="Ações por empresa"/>
