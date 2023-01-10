@@ -4,7 +4,7 @@ import { Wallet } from "phosphor-react";
 
 import IconProfile from "../Icons/IconProfile";
 import IconNotification from "../Icons/IconNotification";
-import IconPlus from "../IconPlus";
+import IconPlus from "../Icons/IconPlus";
 import IconList from "../Icons/IconList";
 
 export default function TopBar(){
