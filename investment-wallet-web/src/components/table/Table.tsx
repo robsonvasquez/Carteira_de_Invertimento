@@ -19,14 +19,16 @@ export default function Table(props : TableProps){
   return(  
     
       <table className='w-full font-medium'>
-        <tr className="flex font-semibold px-1">
-          {props.header.map((h : string) => (
-            <th className='w-1/5 flex justify-center items-center'>{h}</th>
-          ))}
-        </tr>
-        <div className='flex flex-col gap-1'>
+        <thead>
+          <tr className="flex font-semibold px-1">
+            {props.header.map((h : string) => (
+              <th key={h} className='w-1/5 flex justify-center items-center'>{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody className='flex flex-col gap-1'>
         {props.list.map((l : ElementProps) => (
-          <tr className='bg-white flex border border-gray-300 rounded-lg p-1'>
+          <tr key={l.id} className='bg-white flex border border-gray-300 rounded-lg p-1'>
             <td className='w-1/5 flex justify-center items-center'>{l.active}</td>
             <td className='w-1/5 flex justify-center items-center'>{l.currentPrice}</td>
             <td className='w-1/5 flex justify-center items-center'>{l.paidPrice}</td>
@@ -42,7 +44,7 @@ export default function Table(props : TableProps){
             </td>
           </tr>
         ))}
-        </div>
+        </tbody>
       </table>
     
   );
