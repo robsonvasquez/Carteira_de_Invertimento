@@ -1,8 +1,6 @@
 import { FormEvent , FormHTMLAttributes } from "react";
 import Button from "./Button";
 import Input, {InputProps} from "./Input";
-import { genInputSmallStyle } from "antd/es/input/style";
-import { StringGradients } from "antd/es/progress/progress";
 import { useAuth } from "../../contexts/AuthProvider/useAuth";
 import {useNavigate } from "react-router-dom";
 
