@@ -28,7 +28,7 @@ export const AuthProvider = ({children}: IAuthProvider) => {
 
     function logout(){
         setUser(null);
-        setUserLocalStorage(null);
+        localStorage.removeItem('user');
     }
 
     return(

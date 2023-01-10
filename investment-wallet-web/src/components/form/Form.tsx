@@ -27,7 +27,7 @@ export default function Form(props: FormProps){
 
     if(props.type === 'login'){
 
-      await auth.authenticate("eve.holt@reqres.in", "cityslicka")
+      await auth.authenticate(String(data.email), String(data.password))
 
       navigate('/');
 

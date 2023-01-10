@@ -32,8 +32,8 @@ export const formNewCount = [
 export const formLogin = [
   {
     id: '1',
-    name: 'login',
-    placeholder: 'Login',
+    name: 'email',
+    placeholder: 'Email',
     type: 'text',
     image: 'email',
   },

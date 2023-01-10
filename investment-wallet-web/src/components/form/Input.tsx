@@ -8,7 +8,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
 
 export default function Input(props : InputProps){
 
-  const[value, setValue] = useState(props.value);
+  const[value, setValue] = useState('');
   
   const [hiddenPassword, setHiddenPassword] = useState(props.type == 'password' ? true : false);
   const [type, setType] = useState(props.type == 'date' ? 'text' : props.type);
