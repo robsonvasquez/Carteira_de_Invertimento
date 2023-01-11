@@ -1,14 +1,15 @@
 import { ResponsivePie } from '@nivo/pie'
 
 interface PieGraphProps{
-  data: {id: string, label: string, value: number, color: string}[]
+  data: {id: string, label: string, value: number, color: string}[];
+  labels?: boolean;
 }
 
 export default function PieGraph(props: PieGraphProps){
   return (
     <ResponsivePie
       data={props.data}
-      margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+      margin={{ top: 30, right: 10, bottom: 30, left: 0 }}
       innerRadius={0.5}
       padAngle={0.7}
       cornerRadius={3}
@@ -107,7 +108,7 @@ export default function PieGraph(props: PieGraphProps){
               id: 'lines'
           }
       ]}
-      legends={[
+      legends={props.labels ? ( [
         {
           anchor: 'bottom',
           direction: 'row',
@@ -131,7 +132,7 @@ export default function PieGraph(props: PieGraphProps){
             }
           ]
         }
-      ]}
+      ]) : [] } 
     />
   );
 }
