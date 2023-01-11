@@ -9,10 +9,12 @@ import {
 import Login from './pages/Login'
 import User from './pages/User'
 import Home from './pages/Home';
+import Wallet from "./pages/Wallet";
 import NewCount from './pages/NewCount';
 import Profile from "./pages/Profile";
 import NewActive from "./pages/NewActive";
 import { ProtecteLayout } from "./components/ProtecteLayout";
+
 
 // const router = createBrowserRouter([
 //   {
@@ -43,6 +45,7 @@ export default function Router(){
     // <RouterProvider router={router}/>
     <Routes>
       <Route path='/' element={<ProtecteLayout><Home/></ProtecteLayout>}/>
+      <Route path='/wallet' element={<ProtecteLayout><Wallet/></ProtecteLayout>}/>
       <Route path='/user' element={<ProtecteLayout><User/></ProtecteLayout>}/>
       <Route path='/profile' element={<ProtecteLayout><Profile/></ProtecteLayout>}/>
       <Route path='/newactive' element={<ProtecteLayout><NewActive/></ProtecteLayout>}/>
