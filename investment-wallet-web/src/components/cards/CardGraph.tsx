@@ -1,5 +1,10 @@
 import Graph from "../graphs/Graph";
 import Select from "../form/Select";
+import { defaultProps } from "@nivo/pie";
+
+interface CardGraphProps{
+  title: string;
+}
 
 const list = [
   {
@@ -45,7 +50,7 @@ const list = [
 ] 
 
 
-export default function CardGraph(){
+export default function CardGraph(props: CardGraphProps){
 
   const data = [
     {
@@ -215,7 +220,7 @@ export default function CardGraph(){
   return(
     <div className="w-10/12 my-5 p-4 flex flex-col bg-white border border-gray-300 rounded-lg">
       <div className="mb-5 flex justify-between">
-        <h1 className="mb-3 text-2xl">Carteira</h1>
+        <h1 className="mb-3 text-2xl">{props.title}</h1>
         <Select
           options={list}
         />

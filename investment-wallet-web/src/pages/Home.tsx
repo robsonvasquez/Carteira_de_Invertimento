@@ -7,13 +7,13 @@ export default function Home(){
     <div className="w-full h-full flex flex-col items-center">
       <TopBar/>
       <div className="w-full flex flex-col items-center">
-        <CardResume 
-          title={"Resume da Conta"}  
+        <CardResume
+          title="Resume da Conta"
           balance={25}
           appliedValue={500}
           profitability={100}
         />
-        <CardGraph/>
+        <CardGraph title="Histórico da Conta"/>
       </div>
     </div>
   );

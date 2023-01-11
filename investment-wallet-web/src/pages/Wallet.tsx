@@ -47,7 +47,7 @@ export default function Wallet(){
       <TopBar/>
       <div className="w-full flex flex-col items-center">
         <CardResume balance={25} appliedValue={500} title={"Resume da Carteira"} profitability={100}/>
-        <CardGraph/>
+        <CardGraph title="Histórico da Carteira"/>
         <div className="flex w-3/4 justify-between items-center">
           <CardActive text="Ações por empresa"/>
           <CardActive text="Tipos de Ações"/>
