@@ -7,29 +7,6 @@ import Form from "../components/form/Form";
 import {formLogin} from "../components/form/TypeForms";
 
 export default function Login() {
-  
-  // const [login, setlogin] = useState('')
-  // const [password, setPassword] = useState('')
-  
-
-  // const onChage = (e: ChangeEvent) => {
-
-  // }
-
-  // function handleSubmit (e: FormEvent) {
-  //   e.preventDefault();
-    
-  //   const target = e.target as typeof e.target & {      
-  //     email: { value: string };
-  //     password: { value: string };
-  //   };
-
-  //   // const data = {
-  //   //   'email':  target.email.value,
-  //   //   : target.password.value
-  //   // }
-  //   console.log(target);
-  // }
 
   return (
     <div className="h-screen flex flex-col justify-center items-center">
