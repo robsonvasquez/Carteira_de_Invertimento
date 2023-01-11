@@ -8,7 +8,7 @@ export default function Graph(props: GraphProps){
   return (
     <ResponsiveLine
       data={props.data}
-      margin={{ top: 50, right: 90, bottom: 50, left: 60 }}
+      margin={{ top: 30, right: 90, bottom: 45, left: 60 }}
       xScale={{ type: 'point' }}
       yScale={{
         type: 'linear',
