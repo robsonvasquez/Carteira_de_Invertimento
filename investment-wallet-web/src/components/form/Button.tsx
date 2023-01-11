@@ -14,7 +14,7 @@ export default function Button(props: ButtonProps){
       className={
         `h-10 w-96
         flex justify-center items-center
-        rounded text-white shadow
+        rounded-lg text-white shadow
         bg-theme-color hover:bg-houver-button-color
         ${props.className}`
       } 
