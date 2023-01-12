@@ -2,7 +2,7 @@ import { ResponsivePie } from '@nivo/pie'
 
 interface PieGraphProps{
   data: {id: string, label: string, value: number, color: string}[];
-  labels?: boolean;
+  legends?: boolean;
 }
 
 export default function PieGraph(props: PieGraphProps){
@@ -24,6 +24,7 @@ export default function PieGraph(props: PieGraphProps){
               ]
           ]
       }}
+      enableArcLinkLabels={false}
       arcLinkLabelsSkipAngle={10}
       arcLinkLabelsTextColor="#333333"
       arcLinkLabelsThickness={2}
@@ -108,7 +109,7 @@ export default function PieGraph(props: PieGraphProps){
               id: 'lines'
           }
       ]}
-      legends={props.labels ? ( [
+      legends={props.legends ? ( [
         {
           anchor: 'bottom',
           direction: 'row',
