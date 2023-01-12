@@ -34,7 +34,7 @@ export const formLogin = [
     id: '1',
     name: 'email',
     placeholder: 'Email',
-    type: 'text',
+    type: 'email',
     image: 'email',
   },
   {

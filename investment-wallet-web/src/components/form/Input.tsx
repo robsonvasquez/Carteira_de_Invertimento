@@ -38,7 +38,7 @@ export default function Input(props : InputProps){
         onChange={(e => setValue(e.target.value))}
       />
       {props.image == 'user' ? (<User className="absolute ml-2 mt-2" size={24} color={colors.black} weight="regular" />) : (<></>) }
-     
+
       {props.image == 'email' ? (<EnvelopeSimple className="absolute ml-2 mt-2" size={24} color={colors.black} weight="regular" />) : (<></>) }
 
       {props.image == 'lock' ? (<LockSimple className="absolute ml-2 mt-2" size={24} color={colors.black} weight="regular" />) : (<></>) }

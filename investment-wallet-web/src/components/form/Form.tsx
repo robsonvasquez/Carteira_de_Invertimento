@@ -36,7 +36,7 @@ export default function Form(props: FormProps){
   return(
     <form onSubmit={handleSubmit} >
       {props.inputs.map((input : InputProps) => (
-        <Input key={input.id} name={input.name} placeholder={input.placeholder} type={input.type} image={input.image} value={input.value}/>
+        <Input key={input.id} name={input.name} placeholder={input.placeholder} type={input.type} image={input.image} value={input.value} required/>
       ))}
       <Button text={props.button} type='submit'/>
     </form>

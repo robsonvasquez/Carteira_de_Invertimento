@@ -1,6 +1,7 @@
 import TopBar from "../components/bars/TopBar";
 import CardResume from "../components/cards/CardResume";
 import CardGraph from "../components/cards/CardGraph";
+import BottomBar from "../components/bars/BottomBar";
 import CardWallet from "../components/cards/CardWallet";
 import Carousel from "../components/carousel/Carousel";
 
@@ -20,6 +21,7 @@ export default function Home(){
         <Carousel/>
           
       </div>
+      <BottomBar/>
     </div>
   );
 }
