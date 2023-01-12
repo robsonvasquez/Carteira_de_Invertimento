@@ -40,22 +40,24 @@ interface CardWalletProps{
   title: string;
   balance: number;
   variation: number;
+  className?: string
 }
 
 export default function CardWallet(props: CardWalletProps){
   return(
     <div 
-      className="
-      mb-5 p-4 flex justify-between items-center
-      bg-white border border-gray-300 rounded-lg"
+      className={`
+      max-w-max mb-5 p-4 flex justify-between items-center
+      bg-white border border-gray-300 rounded-lg
+      ${props.className}`}
     >
       <div className="w-56 h-56 flex justify-center items-center">
         <PieGraph data={data}/>
       </div>  
-      <div className="h-32 w-32 flex flex-col justify-between ">
-        <span className="flex items-center justify-center font-semibold">{props.title}</span>
+      <div className="h-32 w-40 flex flex-col justify-between ">
+        <span className="flex items-center justify-center font-semibold text-xl">{props.title}</span>
 
-        <div className="flex justify-between font-medium">
+        <div className="w-40 flex justify-between font-medium">
           <span className="flex items-center truncate">R$ {props.balance}</span>        
           <div className="flex items-center">
             {props.variation > 0 ? 
