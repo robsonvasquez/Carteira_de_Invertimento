@@ -26,7 +26,7 @@ export default function Input(props : InputProps){
         onFocus={props.type == 'date' ? (() => setType('date')) : (() => setType(props.type))}
         onBlur={props.type == 'date' ? (() => setType('text')) : (() => setType(props.type))}
         className={
-          `h-10 w-96 p-1 mb-5 ${props.image == undefined ? ('pl-2'): ('pl-9')}
+          `h-8 w-80 sm:h-10 sm:w-96 p-1 mb-5 ${props.image == undefined ? ('pl-2'): ('pl-9')}
           placeholder-theme-color
           font-bold text-base
           rounded-lg border-2 border-zinc-800

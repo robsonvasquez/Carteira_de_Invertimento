@@ -12,7 +12,7 @@ export default function Button(props: ButtonProps){
     <button
       {...props}
       className={
-        `h-10 w-96
+        `h-8 w-80 sm:h-10 sm:w-96
         flex justify-center items-center
         rounded-lg text-white shadow
         bg-theme-color hover:bg-houver-button-color
