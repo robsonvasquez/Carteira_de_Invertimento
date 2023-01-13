@@ -218,7 +218,7 @@ export default function CardGraph(props: CardGraphProps){
   ]
 
   return(
-    <div className="w-10/12 mb-5 p-4 flex flex-col bg-white border border-gray-300 rounded-lg">
+    <div className="flex flex-col w-[80%] mb-5 p-4 bg-white border border-gray-300 rounded-lg">
       <div className="flex justify-between">
         <h1 className="text-2xl">{props.title}</h1>
         <Select

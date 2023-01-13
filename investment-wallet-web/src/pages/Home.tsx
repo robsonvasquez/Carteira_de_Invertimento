@@ -1,8 +1,7 @@
-import TopBar from "../components/bars/TopBar";
 import CardResume from "../components/cards/CardResume";
 import CardGraph from "../components/cards/CardGraph";
-import BottomBar from "../components/bars/BottomBar";
 import CardWallet from "../components/cards/CardWallet";
+import Layout from "../components/layout/Layout";
 import Carousel from "../components/carousel/Carousel";
 
 const list = [
@@ -60,21 +59,18 @@ const list = [
 
 export default function Home(){
   return (
-    <div className="w-full h-full flex flex-col items-center">
-      <TopBar/>
-      <div className="w-full flex flex-col items-center">
-        <CardResume
-          title="Resume da Conta"
-          balance={25}
-          appliedValue={500}
-          profitability={100}
-        />
-        <CardGraph title="Histórico da Conta"/>
-        
-        <Carousel size={2} elements={list}/>
-        
+    <Layout>
+      <div className="h-full w-full flex flex-col items-center">
+          
+            <CardResume
+              title="Resume da Conta"
+              balance={25}
+              appliedValue={500}
+              profitability={100}
+            />
+            <CardGraph title="Histórico da Conta"/>
+            <Carousel size={2} elements={list}/>
       </div>
-      <BottomBar/>
-    </div>
+    </Layout>
   );
 }
