@@ -4,7 +4,7 @@ import { InstagramLogo, FacebookLogo, WhatsappLogo, Wallet } from "phosphor-reac
 export default function BottomBar(){
   return(
     <div className="w-full items-center bg-theme-color mt-5">
-        <div className="w-full flex flex-col justify-end items-center gap-y-4 sm:flex-row sm:justify-between p-4">
+        <div className="w-full flex flex-col justify-end items-center gap-y-4 sm:flex-row sm:justify-between p-4 px-20">
           <div className="flex flex-col">
             <div className="flex justify-center">
               <Wallet className="mr-1" color={colors.white} size={48} weight="fill" />
@@ -30,7 +30,7 @@ export default function BottomBar(){
           </div>
         </div>
       <div className="h-[1px] bg-white w-full"/>
-      <div className="w-full flex justify-center gap-x-2 sm:justify-end p-4">
+      <div className="w-full flex justify-center gap-x-2 sm:justify-start sm:px-20 p-4">
         <InstagramLogo size={36} color={colors.white} weight="thin" />
         <FacebookLogo size={36} color={colors.white} weight="thin" />
         <WhatsappLogo size={36} color={colors.white} weight="thin" />
