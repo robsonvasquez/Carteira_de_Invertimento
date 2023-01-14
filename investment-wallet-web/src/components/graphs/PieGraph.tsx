@@ -9,7 +9,7 @@ export default function PieGraph(props: PieGraphProps){
   return (
     <ResponsivePie
       data={props.data}
-      margin={{ top: 30, right: 10, bottom: 30, left: 0 }}
+      margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
       innerRadius={0.5}
       padAngle={0.7}
       cornerRadius={3}

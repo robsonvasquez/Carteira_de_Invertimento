@@ -8,7 +8,6 @@ const list = [
   {
     key: 0,
     element: <CardWallet
-                //className="ease-linear duration-700"
                 key={0}
                 title="Carteira 1"
                 balance={24.45}
@@ -18,7 +17,6 @@ const list = [
   {
     key: 1,
     element: <CardWallet
-              //className="ease-linear duration-700"
               key={1}
               title="Carteira 2"
               balance={75.26}
@@ -28,7 +26,6 @@ const list = [
   {
     key: 2,
     element: <CardWallet
-              //className="ease-linear duration-700"
               key={2}
               title="Carteira 3"
               balance={235.72}
@@ -38,7 +35,6 @@ const list = [
   {
     key: 3,
     element: <CardWallet
-              //className="ease-linear duration-700"
               key={3}
               title="Carteira 4"
               balance={5.72}
@@ -48,7 +44,6 @@ const list = [
   {
     key: 4,
     element: <CardWallet
-              //className="ease-linear duration-700"
               key={4}
               title="Carteira 5"
               balance={87.29}
@@ -69,7 +64,7 @@ export default function Home(){
               profitability={100}
             />
             <CardGraph title="Histórico da Conta"/>
-            <Carousel size={2} elements={list}/>
+            <Carousel width={400} gap={16} size={3} elements={list}/>
       </div>
     </Layout>
   );

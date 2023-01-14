@@ -47,15 +47,15 @@ export default function CardWallet(props: CardWalletProps){
   return(
     <div 
       className={`
-      h-full w-72  flex justify-between items-center p-4
+      h-60 w-96 flex justify-between items-center
       bg-white border border-gray-300 rounded-lg
       ${props.className}`}
     >
-      <div className="flex justify-center items-center">
+      <div className="h-full w-[55%] flex justify-center items-center">
         <PieGraph data={data}/>
       </div>  
-      <div className="h-full w-full flex flex-col justify-between ">
-        <span className="flex items-center justify-center font-semibold">{props.title}</span>
+      <div className="h-full w-[45%] flex flex-col justify-between py-8 pr-3">
+        <span className="flex items-center justify-center text-2xl font-medium">{props.title}</span>
 
         <div className="w-full flex justify-between font-medium">
           <span className="flex items-center truncate">R$ {props.balance}</span>        
@@ -64,7 +64,7 @@ export default function CardWallet(props: CardWalletProps){
               (<ArrowUp size={16} color={colors.lime[800]}/>):
               (<ArrowDown size={16} color={colors.red[600]}/>)
             }
-            <span className={`${props.variation > 0 ? 'text-lime-800':'text-red-600'}`}>{Math.abs(props.variation)}</span>
+            <span className={`${props.variation > 0 ? 'text-lime-800':'text-red-600'}`}>{Math.abs(props.variation)}%</span>
           </div>
         </div>
       </div>
