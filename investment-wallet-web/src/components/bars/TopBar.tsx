@@ -44,6 +44,42 @@ const list = [
     notification: 'Sua ação KL635 reduziu de 2%',
     time: '1d',
   },
+  {
+    key: 6,
+    title: 'Carteira Valorizando',
+    notification: 'Sua carteira Carteira1 asdjkfasjkdhf asdfhasdlfs asdfaslkdfjlk valorizou de 5%',
+    time: '7h',
+  },
+  {
+    key: 7,
+    title: 'Ações descendo',
+    notification: 'Sua ação KL635 reduziu de 2%',
+    time: '1d',
+  },
+  {
+    key: 8,
+    title: 'Carteira Valorizando',
+    notification: 'Sua carteira Carteira1 asdjkfasjkdhf asdfhasdlfs asdfaslkdfjlk valorizou de 5%',
+    time: '7h',
+  },
+  {
+    key: 9,
+    title: 'Ações descendo',
+    notification: 'Sua ação KL635 reduziu de 2%',
+    time: '1d',
+  },
+  {
+    key: 10,
+    title: 'Carteira Valorizando',
+    notification: 'Sua carteira Carteira1 asdjkfasjkdhf asdfhasdlfs asdfaslkdfjlk valorizou de 5%',
+    time: '7h',
+  },
+  {
+    key: 11,
+    title: 'Ações descendo',
+    notification: 'Sua ação KL635 reduziu de 2%',
+    time: '1d',
+  },
 ]
 
 
@@ -54,7 +90,7 @@ interface onclickTopBarProps{
 export default function TopBar(props: onclickTopBarProps){
 
   return(
-    <div className="bg-theme-color w-full max-h-16 flex items-center justify-between p-2 mb-5">
+    <div className="bg-theme-color w-full max-h-16 flex items-center justify-between p-2">
       <IconList onclick={props.onclick}/>
       <Link to='/' className="flex items-center">
         <Wallet className="" color={colors.white} weight="fill" size="40"/>
