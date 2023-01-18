@@ -22,10 +22,13 @@ export default function Layout({children}:{children: JSX.Element}){
         // </div>
         <div className="w-full h-full flex">
             <Sidebar open={!open}/>
-            <div className={`h-screen w-full flex flex-col overflow-x-hidden`}>
-                <TopBar onclick={onclickTopBar}/>
-                {children}
-                <BottomBar/>
+            <div 
+              className="h-screen w-full flex flex-col overflow-x-hidden
+              scrollbar-thin scrollbar-track-gray-300 scrollbar-thumb-gray-400"
+            >                
+              <TopBar onclick={onclickTopBar}/>
+              {children}
+              <BottomBar/>
             </div>
         </div>
     );
