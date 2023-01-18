@@ -34,7 +34,8 @@ export default function IconNotification(props: IconNotificationProps){
         absolute top-14 z-50 overflow-x-hidden
         grid grid-flow-row divide-y divide-gray-300
         h-72 w-96 p-1 pr-3 rounded-lg 
-        bg-white border border-gray-300`}>
+        bg-white border border-gray-300
+        scrollbar-thin scrollbar-track-gray-300 scrollbar-thumb-gray-400 scrollbar-thumb-rounded-full scrollbar-track-rounded-full`}>
         {props.notification.map((n : notificationInterface) => (
           <>
             <div key={n.key} className="w-full items-center justify-center">
