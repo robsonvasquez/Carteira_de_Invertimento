@@ -2,7 +2,15 @@ import { useState } from "react";
 import colors from "tailwindcss/colors";
 import { Bell } from "phosphor-react";
 
+interface notificationInterface{
+  key: number;
+  title: string;
+  notification: string;
+  time: string; 
+}
+
 interface IconNotificationProps{
+  notification: notificationInterface[];
   size: number;
   className?: string;
 }
@@ -14,25 +22,32 @@ export default function IconNotification(props: IconNotificationProps){
   
   return(
     <button 
-      className={`relative rounded-full focus:outline-none ${props.className}`}
-      onFocus={e => setIconWeigth(!iconWeight)}
+      className="relative flex flex-col items-end justify-center rounded-full focus:outline-none"
       onClick={e => (setIconWeigth(!iconWeight), setShowOptions(!showOptions))}
       onBlur={e => (setIconWeigth(false), setShowOptions(false))}
     >
-      <Bell size={props.size} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }/>
-        <div className={`
-          absolute -right-4 top-14 z-50
-          ${showOptions ? 'visible' : 'invisible hidden'}`}
-        >
-          <div className={`
-            flex flex-col p-1 
-            gap-1 bg-white 
-            border border-gray-300 rounded-lg`}
-          >
-            <span className="truncate">notificação 1</span>
-            <span className="truncate">notificação 2</span>
-            <span className="truncate">notificação 3</span>
-        </div>
+      <Bell 
+        size={props.size} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }
+      />
+      <div className={
+        `${showOptions ? 'visible' : 'invisible'} 
+        absolute top-14 z-50 overflow-x-hidden
+        grid grid-flow-row divide-y divide-gray-300
+        h-72 w-96 p-1 pr-3 rounded-lg 
+        bg-white border border-gray-300`}>
+        {props.notification.map((n : notificationInterface) => (
+          <>
+            <div key={n.key} className="w-full items-center justify-center">
+              <div className="px-4 py-2 flex flex-col my-1 rounded-lg hover:bg-sky-100 leading-7">
+                <div className="w-full flex justify-between">
+                  <span className="truncate font-semibold">{n.title}</span>
+                  <span className="truncate text-zinc-500">{n.time}</span>
+                </div>
+                <span className="whitespace-normal text-left text-zinc-600">{n.notification}</span>
+              </div>
+            </div>
+          </>
+        ))}            
       </div>
     </button>
   );
