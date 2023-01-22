@@ -46,14 +46,23 @@ export default function Carousel(props: CarouselProps){
   }
 
   function handleLeft(){
+
+    let pixelLeft = Number(refItem.current?.offsetWidth) + 15 ;
+    console.log('left',pixelLeft)
+
     if(refCarousel.current){      
-      refCarousel.current.scrollLeft -= 400//(refCarousel.current.offsetWidth/props.elements.length)
+      refCarousel.current.scrollLeft -= pixelLeft//(refCarousel.current.offsetWidth/props.elements.length)
       console.log(refCarousel.current.offsetWidth/props.elements.length)
     }    
   }
   function handleRigth(){
+
+    let pixelRigth = Number(refItem.current?.offsetWidth) + 15;
+    console.log(pixelRigth)
+
+
     if(refCarousel.current){
-      refCarousel.current.scrollLeft += 400//(refCarousel.current.offsetWidth/400)
+      refCarousel.current.scrollLeft += pixelRigth//(refCarousel.current.offsetWidth/400)
       console.log(refCarousel.current.offsetWidth)
     }
   }
@@ -79,12 +88,12 @@ export default function Carousel(props: CarouselProps){
 
   const x = 400;
   return(  
-    <div className="max-w-max flex items-center gap-5 justify-center">
+    <div className="max-w-[80%] flex items-center gap-5 justify-center">
       <CaretLeft 
         className="rounded-full bg-gray-200"
         // onClick={e => (setAnimation(true), setDirection('left'))}
         onClick={e => handleLeft()}
-        size={60}
+        size={30}
         color={colors.gray[400]} 
         weight='bold'
       />
@@ -107,7 +116,7 @@ export default function Carousel(props: CarouselProps){
         className="rounded-full bg-gray-200"
         // onClick={e => (setAnimation(true), setDirection('right'))}
         onClick={e => handleRigth()}
-        size={60}
+        size={30}
         color={colors.gray[400]}
         weight='bold'
       />

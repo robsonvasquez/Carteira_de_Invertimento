@@ -17,15 +17,13 @@ export default function IconLIst({className, size = 40, onclick}: IconListProps)
     <button 
       className={`flex flex-col rounded-full focus:outline-none ${className}`}
       onClick={e => (setIconWeigth(!iconWeight), onclick())}
-      //onBlur={e => (setIconWeigth(false), setShowOptions(false))}
+      //onBlur={e => (setIconWeigth(!iconWeight), onblur())}
     >
-      {!iconWeight ? (
+      {iconWeight ? (
         <List size={size} color={colors.white} weight='regular'/>
       ) : (
-        <span className="text-2xl font-semiboldbold text-white">X</span>
+        <List size={size} color={colors.white} weight='light'/>
       )}
-      
-        
     </button>
   );
 }

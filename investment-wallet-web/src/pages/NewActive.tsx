@@ -6,7 +6,7 @@ export default function NewActive(){
   return(
     
     <Layout>
-      <div className="w-screen h-full flex justify-center items-center">
+      <div className="w-full h-full flex justify-center items-center">
         <div className="flex justify-center mt-4">
           <div className="w-96 flex flex-col">
             <h1 className={`text-theme-color text-center text-3xl sm:text-4xl font-bold mb-8`}>Cadastrar ativo</h1>
