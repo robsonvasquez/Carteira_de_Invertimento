@@ -3,7 +3,8 @@ import colors from "tailwindcss/colors";
 import { User, LockSimple, EnvelopeSimple, Eye, EyeSlash, Phone, IdentificationCard, Password } from "phosphor-react";
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
-  image?: string
+  key: number;
+  image?: string;
 }
 
 export default function Input(props : InputProps){
