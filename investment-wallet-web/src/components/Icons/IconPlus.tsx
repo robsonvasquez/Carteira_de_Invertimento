@@ -1,6 +1,7 @@
 import { useState } from "react";
 import colors from "tailwindcss/colors";
 import { PlusCircle } from "phosphor-react";
+import { formNewWallet } from "../../FormatForms";
 
 interface IconPlusProps{
   size: number;

@@ -1,6 +1,6 @@
 import LinkGreen from "../components/LinkGreen";
 import Form from "../components/form/Form";
-import { formNewCount } from "../components/form/TypeForms";
+import { formNewCount } from "../FormatForms";
 
 export default function NewCount(){
   return(

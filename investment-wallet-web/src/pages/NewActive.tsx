@@ -1,6 +1,6 @@
 import TopBar from "../components/bars/TopBar";
 import Form from "../components/form/Form";
-import { formNewActive } from "../components/form/TypeForms";
+import { formNewActive } from "../FormatForms";
 import Layout from "../components/layout/Layout";
 
 export default function NewActive(){

@@ -4,7 +4,7 @@ import { Wallet } from "phosphor-react";
 import Button from '../components/form/Button';
 import LinkGreen from "../components/LinkGreen";
 import Form from "../components/form/Form";
-import {formLogin} from "../components/form/TypeForms";
+import {formLogin} from "../FormatForms";
 
 export default function Login() {
 
