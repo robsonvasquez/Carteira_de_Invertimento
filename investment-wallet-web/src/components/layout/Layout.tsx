@@ -23,7 +23,7 @@ export default function Layout({children}:{children: JSX.Element}){
         <div className="w-full h-full flex">
             <Sidebar open={!open}/>
             <div 
-              className="h-screen w-full flex flex-col overflow-x-hidden
+              className="h-full w-full gap-5 flex flex-col overflow-x-hidden
               scrollbar-thin scrollbar-track-gray-300 scrollbar-thumb-gray-400"
             >                
               <TopBar onclick={onclickTopBar}/>
