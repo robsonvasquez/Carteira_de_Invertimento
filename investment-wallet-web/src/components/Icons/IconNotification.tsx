@@ -43,20 +43,20 @@ export default function IconNotification(props: IconNotificationProps){
         scrollbar scrollbar-w-1 scrollbar-track-zinc-300 scrollbar-thumb-zinc-400
         scrollbar-track-rounded-full scrollbar-thumb-rounded-full`}>
         {props.notification.map((n : notificationInterface) => (
-          <>
-            <div key={n.key} className="w-full items-center justify-center gap-9">
-              <div 
-                onClick={e => navigate("/newactive")} 
-                className="px-4 my-1 flex flex-col rounded-lg hover:bg-sky-50 leading-10"
-              >
-                <div className="w-full flex justify-between">
-                  <span className="truncate font-semibold">{n.title}</span>
-                  <span className="truncate text-zinc-400">{n.time}</span>
-                </div>
-                <span className="whitespace-normal text-left text-zinc-500 leading-normal">{n.notification}</span>
+          
+          <div key={n.key} className="w-full items-center justify-center gap-9">
+            <div 
+              onClick={e => navigate("/newactive")} 
+              className="px-4 my-1 flex flex-col rounded-lg hover:bg-sky-50 leading-10"
+            >
+              <div className="w-full flex justify-between">
+                <span className="truncate font-semibold">{n.title}</span>
+                <span className="truncate text-zinc-400">{n.time}</span>
               </div>
+              <span className="whitespace-normal text-left text-zinc-500 leading-normal">{n.notification}</span>
             </div>
-          </>
+          </div>
+          
         ))}            
       </div>
     </button>
