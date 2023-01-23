@@ -48,26 +48,26 @@ export default function Carousel(props: CarouselProps){
   function handleLeft(){
 
     let pixelLeft = Number(refItem.current?.offsetWidth) + 15 ;
-    console.log('left',pixelLeft)
+    // console.log('left',pixelLeft)
 
     if(refCarousel.current){      
       refCarousel.current.scrollLeft -= pixelLeft//(refCarousel.current.offsetWidth/props.elements.length)
-      console.log(refCarousel.current.offsetWidth/props.elements.length)
+      // console.log(refCarousel.current.offsetWidth/props.elements.length)
     }    
   }
   function handleRigth(){
 
     let pixelRigth = Number(refItem.current?.offsetWidth) + 15;
-    console.log(pixelRigth)
+    // console.log(pixelRigth)
 
 
     if(refCarousel.current){
       refCarousel.current.scrollLeft += pixelRigth//(refCarousel.current.offsetWidth/400)
-      console.log(refCarousel.current.offsetWidth)
+      // console.log(refCarousel.current.offsetWidth)
     }
   }
 
-  console.log(i, j, animation, direction)
+  // console.log(i, j, animation, direction)
 
   // useEffect (()=>{
   //   if(animation){
