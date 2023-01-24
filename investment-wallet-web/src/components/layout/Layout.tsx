@@ -3,7 +3,7 @@ import BottomBar from "../bars/BottomBar";
 import Sidebar from "../bars/SideBar";
 import TopBar from "../bars/TopBar";
 
-export default function Layout({children}:{children: JSX.Element}){
+export default function Layout(props: {children: JSX.Element}){
 
     const[open, setOpen] = useState(true);
 
@@ -20,14 +20,14 @@ export default function Layout({children}:{children: JSX.Element}){
         //         <BottomBar/>
         //     </div>
         // </div>
-        <div className="w-full h-full flex">
+        <div className="w-full flex">
             <Sidebar open={!open}/>
             <div 
-              className="h-full w-full gap-5 flex flex-col overflow-x-hidden
+              className="w-full flex flex-col 
               scrollbar-thin scrollbar-track-gray-300 scrollbar-thumb-gray-400"
             >                
               <TopBar onclick={onclickTopBar}/>
-              {children}
+              {props.children}
               <BottomBar/>
             </div>
         </div>
