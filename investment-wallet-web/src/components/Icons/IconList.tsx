@@ -8,7 +8,7 @@ interface IconListProps{
   onclick: () =>void;
 }
 
-export default function IconLIst({className, size = 40, onclick}: IconListProps){
+export default function IconList({className, size = 40, onclick}: IconListProps){
   
   const [iconWeight, setIconWeigth] = useState(false)
   //const [showOptions, setShowOptions] = useState(false)
