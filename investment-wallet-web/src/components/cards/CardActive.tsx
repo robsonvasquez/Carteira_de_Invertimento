@@ -40,7 +40,7 @@ export default function CardActive(props: CardActive){
   ]
 
   return (
-    <div className="w-5/12 h-96 my-5 p-4 flex flex-col bg-white border border-zinc-300 rounded-lg">
+    <div className="w-5/12 h-96 p-4 flex flex-col bg-white border border-zinc-300 rounded-lg">
       <div className="flex justify-start">
         <h1 className="mb-3 text-2xl">{props.text}</h1>
       </div>

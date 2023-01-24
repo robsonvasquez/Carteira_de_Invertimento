@@ -3,7 +3,7 @@ import { InstagramLogo, FacebookLogo, WhatsappLogo, Wallet } from "phosphor-reac
 
 export default function BottomBar(){
   return(
-    <div className="w-full items-center bg-theme-color mt-5">
+    <div className="w-full items-center bg-theme-color">
         <div className="w-full flex flex-col justify-end items-center gap-y-4 sm:flex-row sm:justify-between p-4 px-20">
           <div className="flex flex-col">
             <div className="flex justify-center">
