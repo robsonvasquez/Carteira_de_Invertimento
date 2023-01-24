@@ -26,7 +26,7 @@ export default function Modal(props: ModalProps){
     >  
       <div 
         className="
-        relative max-w-max
+        relative w-[30%] min-w-min
         flex flex-col
         justify-center items-center
         p-5 bg-white rounded-lg
