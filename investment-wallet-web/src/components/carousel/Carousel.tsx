@@ -98,7 +98,7 @@ export default function Carousel(props: CarouselProps){
         weight='bold'
       />
       <div 
-        className={`w-[1200px] overflow-x-hidden flex gap-4 px-2 scroll-smooth`}
+        className={`w-[1200px] overflow-x-hidden flex gap-4 scroll-smooth`}
         ref={refCarousel}
       >
         {props.elements.map((element: elementInterface) => (
