@@ -15,7 +15,7 @@ export default function Button(props: ButtonProps){
         `h-8 w-80 sm:h-10 sm:w-96
         flex justify-center items-center
         rounded-lg text-white shadow
-        bg-theme-color hover:bg-houver-button-color
+        bg-theme-color hover:bg-theme-hover-color
         ${props.className}`
       } 
       >
