@@ -47,7 +47,7 @@ export default function Select(props: SelectProps){
             >
               {props.options.map((op: optionInterface) => (
                 <span 
-                  className={`pl-2 rounded hover:bg-sky-100 ${selected.id == op.id ? 'bg-blue-200' : '' }`}
+                  className={`pl-2 rounded hover:bg-sky-50 ${selected.id == op.id ? 'bg-sky-100' : '' }`}
                   onClick={e => (setSelected(op), setShowOption(false))} 
                   key={op.id}
                 >

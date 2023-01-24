@@ -41,7 +41,7 @@ export default function IconProfile(props: IconProfileProps){
           >
             <div 
               onClick={e => navigate('/profile')} 
-              className="flex items-center justify-start gap-2 px-4 hover:bg-sky-100 rounded-lg"
+              className="flex items-center justify-start gap-2 px-4 hover:bg-sky-50 rounded-lg"
             >
               <Gear 
                 className="pointer-events-none" 
@@ -54,7 +54,7 @@ export default function IconProfile(props: IconProfileProps){
             </div>
             <div
               onClick={SingOut} 
-              className="flex items-center justify-start gap-2 px-4 hover:bg-sky-100 rounded-lg"
+              className="flex items-center justify-start gap-2 px-4 hover:bg-sky-50 rounded-lg"
             >
               <SignOut className="pointer-events-none"
                 size={24}
