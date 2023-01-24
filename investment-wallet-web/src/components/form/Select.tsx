@@ -21,8 +21,8 @@ export default function Select(props: SelectProps){
       <button 
         className='
           w-full h-full flex flex-col items-center
-        bg-white border border-gray-300 
-        hover:border-gray-400 rounded-lg shadow'
+        bg-white border border-zinc-300 
+        hover:border-zinc-400 rounded-lg shadow'
         onClick={e => (setCaret(!caret), setShowOption(!showOptions))}        
         onBlur={e => (setCaret(false), setShowOption(false))}
       >
@@ -43,7 +43,7 @@ export default function Select(props: SelectProps){
               className='
                 flex flex-col p-1
                 text-start bg-white leading-loose 
-                border border-gray-300 rounded-lg'
+                border border-zinc-300 rounded-lg'
             >
               {props.options.map((op: optionInterface) => (
                 <span 
