@@ -55,7 +55,7 @@ const list = [
 export default function Home(){
   return (
     <Layout>
-      <div className="h-full w-full flex flex-col items-center">
+      <div className="h-full w-full flex flex-col items-center gap-5 py-5">
           
             <CardResume
               title="Resume da Conta"
