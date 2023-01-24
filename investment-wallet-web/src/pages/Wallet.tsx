@@ -7,6 +7,12 @@ import CardResume from "../components/cards/CardResume";
 import CardGraph from "../components/cards/CardGraph";
 import CardActive from "../components/cards/CardActive";
 import Button from "../components/form/Button";
+import { useState } from "react";
+import Modal from "../components/modal/Modal";
+import Title from "../components/Title";
+import Form from "../components/form/Form";
+import { formNewActive } from "../FormatForms";
+import Layout from "../components/layout/Layout";
 
 const l = [
   {
@@ -42,25 +48,37 @@ const l = [
 const header = ['Ativo', 'Preço pago', 'Preço Atual', 'Variação', 'Opções']
 
 export default function Wallet(){
+
+  const [showModal, setShowModal] = useState(false)
+
   return(
-    <div className="w-full h-full flex flex-col items-center">
-      <TopBar/>
-      <div className="w-full flex flex-col items-center">
-        <CardResume balance={25} appliedValue={500} title={"Resume da Carteira"} profitability={100}/>
-        <CardGraph title="Histórico da Carteira"/>
-        <div className="flex w-3/4 justify-between items-center">
-          <CardActive text="Ações por empresa"/>
-          <CardActive text="Tipos de Ações"/>
+    <>
+      <Layout>
+        <div className="w-full h-full flex flex-col items-center gap-5 py-5">
+          <CardResume balance={25} appliedValue={500} title={"Resume da Carteira"} profitability={100}/>
+          <CardGraph title="Histórico da Carteira"/>
+          <div className="flex w-3/4 justify-between items-center">
+            <CardActive text="Ações por empresa"/>
+            <CardActive text="Tipos de Ações"/>
+          </div>
+          <div className="w-9/12 gap-5 flex flex-col items-end">
+            <Button
+              className='w-52'
+              onClick={() => setShowModal(true)}
+              image='plus'  
+              text='Adicionar ativo'
+            />
+            <Table header={header} list={l}/>
+          </div>
         </div>
-        <div className="w-9/12 mt-5 flex flex-col items-end">
-          <Link to="/newactive" className="mb-5">
-            <Button image='plus' className='w-52' text='Adicionar ativo'/>
-          </Link>
-          <Table header={header} list={l}/>
-        </div>
-      </div>
-      <BottomBar/>
-    </div>
+      </Layout>
+     
+      {showModal ? (
+        <Modal onClose={() => setShowModal(false)}>
+            <Title>CADASTRAR ATIVO</Title>
+            <Form inputs={formNewActive} button="Cadastrar ativo"/>
+        </Modal>
+      ): null}
+    </>
   );
 }
-
