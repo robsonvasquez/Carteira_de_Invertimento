@@ -48,7 +48,7 @@ export default function CardWallet(props: CardWalletProps){
     <div 
       className={`
       h-60 w-56 sm:w-96 flex justify-between items-center
-      bg-white border border-gray-300 rounded-lg
+      bg-white border border-zinc-300 rounded-lg
       ${props.className}`}
     >
       <div className={`h-full flex justify-center items-center ${'sm' ? 'w-[55%]' : ''}`}>

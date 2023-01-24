@@ -37,7 +37,7 @@ export default function IconNotification(props: IconNotificationProps){
       <div className={
         `${showOptions ? 'visible' : 'invisible'} 
         absolute top-14 z-50 overflow-x-hidden
-        grid grid-cols-1 divide-y divide-gray-300
+        grid grid-cols-1 divide-y divide-zinc-300
         h-72 w-96 pl-1 pr-2 rounded-lg rounded-r-[3px]
         bg-white border border-r-0 border-zinc-300
         scrollbar scrollbar-w-1 scrollbar-track-zinc-300 scrollbar-thumb-zinc-400

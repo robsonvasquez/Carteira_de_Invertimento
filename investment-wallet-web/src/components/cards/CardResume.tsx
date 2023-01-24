@@ -9,7 +9,7 @@ interface CardResumeProps{
 export default function CardResume(props: CardResumeProps){
 
   return(
-    <div className="w-[80%] lg:w-[50%] my-5 p-4 bg-white border border-gray-300 rounded-lg">
+    <div className="w-[80%] lg:w-[50%] my-5 p-4 bg-white border border-zinc-300 rounded-lg">
       <h1 className="mb-3 text-2xl">{props.title}</h1>
       <div className="flex justify-between">
         <div>

@@ -37,7 +37,7 @@ export default function IconProfile(props: IconProfileProps){
           <div
             className="absolute max-w-max flex flex-col
               gap-1 top-14 p-1 rounded-lg bg-white 
-              border border-gray-300"
+              border border-zinc-300"
           >
             <div 
               onClick={e => navigate('/profile')} 
