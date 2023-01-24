@@ -12,7 +12,6 @@ import Home from './pages/Home';
 import Wallet from "./pages/Wallet";
 import NewCount from './pages/NewCount';
 import Profile from "./pages/Profile";
-import NewActive from "./pages/NewActive";
 import { ProtecteLayout } from "./components/ProtecteLayout";
 
 
@@ -48,7 +47,6 @@ export default function Router(){
       <Route path='/wallet' element={<ProtecteLayout><Wallet/></ProtecteLayout>}/>
       <Route path='/user' element={<ProtecteLayout><User/></ProtecteLayout>}/>
       <Route path='/profile' element={<ProtecteLayout><Profile/></ProtecteLayout>}/>
-      <Route path='/newactive' element={<ProtecteLayout><NewActive/></ProtecteLayout>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/newcount' element={<NewCount/>}/>
     </Routes>
