@@ -1,4 +1,4 @@
-import { MouseEvent, MouseEventHandler, ReactElement, useRef } from "react";
+import { MouseEvent, useRef } from "react";
 
 interface ModalProps{
   children: JSX.Element[];
