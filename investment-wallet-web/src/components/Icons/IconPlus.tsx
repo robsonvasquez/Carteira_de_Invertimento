@@ -5,6 +5,7 @@ import { useNavigate }  from "react-router-dom";
 import Modal from "../modal/Modal";
 import Form from "../form/Form";
 import { formNewWallet } from "../../FormatForms";
+import Title from "../Title";
 
 interface IconPlusProps{
   size: number;
@@ -28,9 +29,7 @@ export default function IconPlus(props: IconPlusProps){
       
       {showModal ? (
         <Modal onClose={() => setShowModal(false)}>
-          <h1
-           className="text-theme-color text-center text-3xl sm:text-4xl font-bold mb-8" 
-          >Cadastrar um nova carteira</h1>
+          <Title >CADASTRAR UMA NOVA CARTEIRA</Title>
           <Form inputs={formNewWallet} button="Cadastrar carteira"/>
         </Modal>
       ) : null}
