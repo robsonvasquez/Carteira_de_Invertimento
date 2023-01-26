@@ -6,7 +6,7 @@ export default function SideBar(props: {open: boolean}){
   const navigate = useNavigate();
 
   return(
-    <aside className={`${props.open ? "w-[50%] sm:w-[50%] md:w-[25%]" : "w-0"} transform ease-linear duration-200 bg-theme-color`}>
+    <aside className={`${props.open ? "w-[50%] sm:w-[50%] md:w-[25%]" : "w-0"} transition ease-linear bg-theme-color`}>
       <div className={`${props.open ? "visible" : "invisible"} flex flex-col gap-20 items-center pt-5 px-4`}>
         <IconUser/>
         <div className="w-full gap-y-1 sm:gap-y-4 flex flex-col text-center text-white">
