@@ -16,7 +16,7 @@ export default function IconMenu(props : IconMenuProps){
   
   return(
     <button 
-      className={`focus:outline outline-white ${props.className}`}
+      className={`outline-none ${props.className}`}
       onClick={e => props.onclick()}
     >
       <List size={props.size} color={colors.white} weight='light'/>
