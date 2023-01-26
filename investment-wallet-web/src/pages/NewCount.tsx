@@ -1,12 +1,13 @@
 import LinkGreen from "../components/LinkGreen";
 import Form from "../components/form/Form";
 import { formNewCount } from "../FormatForms";
+import Title from "../components/Title";
 
 export default function NewCount(){
   return(
     <div className="h-screen flex justify-center items-center">
       <div className="w-96 flex flex-col">
-        <h1 className={`text-theme-color text-center text-5xl font-bold mb-8`}>Crie sua conta</h1>
+        <Title>CRIE SUA CONTA</Title>
         <div className="flex flex-col justify-center items-center">
           <Form inputs={formNewCount} button="Cadastrar"/>
           

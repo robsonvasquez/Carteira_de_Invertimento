@@ -1,8 +1,8 @@
 import LinkGreen from "../components/LinkGreen";
-import TopBar from "../components/bars/TopBar";
 import { formProfile } from "../FormatForms";
 import Form from "../components/form/Form";
 import Layout from "../components/layout/Layout";
+import Title from "../components/Title";
 
 export default function Profile(){
   return(
@@ -10,7 +10,7 @@ export default function Profile(){
       <div className="w-screen h-full flex justify-center items-center">
         <div className="flex justify-center mt-4">
           <div className="w-96 flex flex-col">
-            <h1 className={`text-theme-color text-center text-3xl sm:text-4xl font-bold mb-8`}>Minha conta</h1>
+            <Title>MINHA CONTA</Title>
             <div className="flex flex-col justify-center items-center">
               <Form inputs={formProfile} button="Salvar"/>
               <LinkGreen to='/' className='mt-5' text='Excluir minha conta.'/>
