@@ -8,10 +8,8 @@ export default function Modal(props: ModalProps){
   
   const refBackgraound = useRef<HTMLDivElement>(null);
   
-  const handleOutSideClick  = (event : MouseEvent<HTMLDivElement>)  => {
-    if (refBackgraound.current == event.target){
-      props.onClose()
-    }
+  const handleOutSideClick  = (event : MouseEvent<HTMLDivElement>) => {
+    if (refBackgraound.current == event.target) props.onClose()
   }
 
   return(
@@ -27,7 +25,7 @@ export default function Modal(props: ModalProps){
       <div 
         className="
         relative w-[30%] min-w-min
-        flex flex-col
+        flex flex-col gap-2
         justify-center items-center
         p-5 bg-white rounded-lg
         cursor-auto border border-zinc-300"
