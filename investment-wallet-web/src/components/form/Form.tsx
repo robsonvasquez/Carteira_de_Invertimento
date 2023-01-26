@@ -34,7 +34,7 @@ export default function Form(props: FormProps){
   }
 
   return(
-    <form onSubmit={handleSubmit} >
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2">
       {props.inputs.map((input : InputProps) => (
         <Input key={input.key} name={input.name} placeholder={input.placeholder} type={input.type} image={input.image} value={input.value}/>
       ))}
