@@ -1,5 +1,6 @@
 import colors from "tailwindcss/colors";
 import { IconWeight, Wallet } from "phosphor-react";
+import { Link } from "react-router-dom";
 
 interface LogoProps{
   sizeLogo?: number;
@@ -17,9 +18,11 @@ Logo.defaultProps = defaultProps;
 
 export default function Logo(props: LogoProps){
   return(
-    <div className={`flex justify-start items-center gap-1 ${props.className}`}>
-      <Wallet color={colors.white} size={props.sizeLogo} weight={props.weightLogo}/>
-      <h1 className={`text-white text-3xl font-bold ${props.classNameText}`}>Wallet</h1>
-    </div>
+    <Link to='/'>
+      <div className={`flex justify-start items-center gap-1 ${props.className}`}>
+        <Wallet color={colors.white} size={props.sizeLogo} weight={props.weightLogo}/>
+        <h1 className={`text-white text-3xl font-bold ${props.classNameText}`}>Wallet</h1>
+      </div>
+    </Link>
   );
 }

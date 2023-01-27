@@ -96,9 +96,7 @@ export default function TopBar(props: TopBarProps){
       <div className="w-40 flex justify-start items-center">
         {props.open ? null :<IconMenu onclick={props.onOpen}/>}
       </div>
-      <Link to='/'>
-        <Logo/>
-      </Link>
+      <Logo/>
       <div className="w-40 flex items-center gap-x-5">
         <IconPlus size={40} className={`hidden sm:block`}/>
         <IconNotification notification={list} size={40} className={`hidden sm:block`}/>
