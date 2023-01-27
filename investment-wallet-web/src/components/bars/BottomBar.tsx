@@ -31,9 +31,9 @@ export default function BottomBar(){
         </div>
       <div className="h-[1px] bg-white w-full"/>
       <div className="w-full flex justify-center gap-x-2 sm:justify-start sm:px-20 p-4">
-        <InstagramLogo size={36} color={colors.white} weight="thin" />
-        <FacebookLogo size={36} color={colors.white} weight="thin" />
-        <WhatsappLogo size={36} color={colors.white} weight="thin" />
+        <InstagramLogo size={36} color={colors.white} weight="light" />
+        <FacebookLogo size={36} color={colors.white} weight="light" />
+        <WhatsappLogo size={36} color={colors.white} weight="light" />
       </div>
     </div>
   );
