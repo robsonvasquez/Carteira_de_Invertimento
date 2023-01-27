@@ -1,15 +1,13 @@
 import colors from "tailwindcss/colors";
-import { InstagramLogo, FacebookLogo, WhatsappLogo, Wallet } from "phosphor-react";
+import { InstagramLogo, FacebookLogo, WhatsappLogo } from "phosphor-react";
+import Logo from "../Logo";
 
 export default function BottomBar(){
   return(
     <div className="w-full items-center bg-theme-color">
         <div className="w-full flex flex-col justify-end items-center gap-y-4 sm:flex-row sm:justify-between p-4 px-20">
           <div className="flex flex-col">
-            <div className="flex justify-center">
-              <Wallet className="mr-1" color={colors.white} size={48} weight="fill" />
-              <h1 className={`text-white text-4xl font-bold`}>Wallet</h1>
-            </div>
+            <Logo sizeLogo={48} classNameText="text-4xl"/>
             <span className="text-white">Todos os direitos reservados</span>
           </div>
           <div className="text-white flex">

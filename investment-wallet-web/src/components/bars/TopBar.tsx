@@ -6,6 +6,7 @@ import IconProfile from "../Icons/IconProfile";
 import IconNotification from "../Icons/IconNotification";
 import IconPlus from "../Icons/IconPlus";
 import IconMenu from "../Icons/IconMenu";
+import Logo from "../Logo";
 
 const list = [
   {
@@ -95,9 +96,8 @@ export default function TopBar(props: TopBarProps){
       <div className="w-40 flex justify-start items-center">
         {props.open ? null :<IconMenu onclick={props.onOpen}/>}
       </div>
-      <Link to='/' className="flex items-center">
-        <Wallet className="" color={colors.white} weight="fill" size="40"/>
-        <h1 className={`text-white text-3xl font-bold`}>Wallet</h1>
+      <Link to='/'>
+        <Logo/>
       </Link>
       <div className="w-40 flex items-center gap-x-5">
         <IconPlus size={40} className={`hidden sm:block`}/>
