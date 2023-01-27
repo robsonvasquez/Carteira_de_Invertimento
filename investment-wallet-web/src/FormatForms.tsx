@@ -1,27 +1,27 @@
 export const formNewCount = [
   {
-    key: 1,
+    key: 0,
     name: 'name',
     placeholder: 'Nome',
     type: 'text',
     image: 'user',
   },
   {
-    key: 2,
+    key: 1,
     name: 'email',
     placeholder: 'Email',
     type: 'email',
     image: 'email',
   },
   {
-    key: 3,
+    key: 2,
     name: 'password',
     placeholder: 'Senha',
     type: 'password',
     image: 'lock',
   },  
   {
-    key: 4,
+    key: 3,
     name: 'check_password',
     placeholder: 'Confirme a Senha',
     type: 'password',
@@ -31,14 +31,14 @@ export const formNewCount = [
 
 export const formLogin = [
   {
-    key: 1,
+    key: 0,
     name: 'email',
     placeholder: 'Email',
     type: 'email',
     image: 'email',
   },
   {
-    key: 2,
+    key: 1,
     name: 'password',
     placeholder: 'Senha',
     type: 'password',
@@ -48,44 +48,44 @@ export const formLogin = [
 
 export const formNewActive = [
   {
-    key: 1,
+    key: 0,
     name: 'active',
     placeholder: 'Ativo',
     type: 'text',
 
   },
   {
-    key: 2,
+    key: 1,
     name: 'date',
     placeholder: 'Data da Compra',
     type: 'date',
   },
   {
-    key: 3,
+    key: 2,
     name: 'institution',
     placeholder: 'Instituição',
     type: 'text',
   },
   {
-    key: 4,
+    key: 3,
     name: 'amount',
     placeholder: 'Quantidade',
     type: 'number',
   },
   {
-    key: 5,
+    key: 4,
     name: 'paidPrice',
     placeholder: 'Valor Pago',
     type: 'number',
   },
   {
-    key: 6,
+    key: 5,
     name: 'investedPrice',
     placeholder: 'Valor investido',
     type: 'number',
   },
   {
-    key: 7,
+    key: 6,
     name: 'brokerageRate',
     placeholder: 'Taxa de corretagem',
     type: 'number',
@@ -94,42 +94,42 @@ export const formNewActive = [
 
 export const formProfile = [
   {
-    key: 1,
+    key: 0,
     name: 'name',
     placeholder: 'Nome',
     type: 'text',
     image: 'user',
   },
   {
-    key: 2,
+    key: 1,
     name: 'email',
     placeholder: 'Email',
     type: 'email',
     image: 'email',
   },
   {
-    key: 3,
+    key: 2,
     name: 'cpf',
     placeholder: 'CPF',
     type: 'text',
     image: 'card',
   },
   {
-    key: 4,
+    key: 3,
     name: 'phone',
     placeholder: 'Telefone',
     type: 'text',
     image: 'phone',
   },
   {
-    key: 5,
+    key: 4,
     name: 'password',
     placeholder: 'Senha',
     type: 'password',
     image: 'lock',
   },
   {
-    key: 6,
+    key: 5,
     name: 'check_password',
     placeholder: 'Confirme a senha',
     type: 'password',
