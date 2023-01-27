@@ -27,13 +27,10 @@ export default function IconPlus(props: IconPlusProps){
         <PlusCircle size={props.size} color={colors.white} weight={iconWeight ? 'regular' : 'thin' }/>      
       </button>
       
-      {showModal ? (
-        <Modal onClose={() => setShowModal(false)}>
-          <Title >CADASTRAR UMA NOVA CARTEIRA</Title>
-          <Form inputs={formNewWallet} button="Cadastrar carteira"/>
-        </Modal>
-      ) : null}
-      
+      <Modal showModal={showModal} onClose={() => setShowModal(false)}>
+        <Title >CADASTRAR UMA NOVA CARTEIRA</Title>
+        <Form inputs={formNewWallet} button="Cadastrar carteira"/>
+      </Modal>
     </>
   );
 }

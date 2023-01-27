@@ -73,12 +73,10 @@ export default function Wallet(){
         </div>
       </Layout>
      
-      {showModal ? (
-        <Modal onClose={() => setShowModal(false)}>
-          <Title>CADASTRAR ATIVO</Title>
-          <Form inputs={formNewActive} button="Cadastrar ativo"/>
-        </Modal>
-      ): null}
+      <Modal showModal={showModal} onClose={() => setShowModal(false)}>
+        <Title>CADASTRAR ATIVO</Title>
+        <Form inputs={formNewActive} button="Cadastrar ativo"/>
+      </Modal> 
     </>
   );
 }
