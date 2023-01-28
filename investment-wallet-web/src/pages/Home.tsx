@@ -61,7 +61,7 @@ export default function Home(){
               title="Resume da Conta"
               balance={25}
               appliedValue={500}
-              profitability={100}
+              variation={100}
             />
             <CardGraph title="Histórico da Conta"/>
             <Carousel width={400} gap={16} size={3} elements={list}/>

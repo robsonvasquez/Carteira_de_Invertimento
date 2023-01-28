@@ -55,7 +55,7 @@ export default function Wallet(){
     <>
       <Layout>
         <div className="w-full h-full flex flex-col items-center gap-5 py-5">
-          <CardResume balance={25} appliedValue={500} title={"Resume da Carteira"} profitability={100}/>
+          <CardResume balance={25} appliedValue={500} title={"Resume da Carteira"} variation={100}/>
           <CardGraph title="Histórico da Carteira"/>
           <div className="flex w-3/4 justify-between items-center">
             <CardActive text="Ações por empresa"/>
