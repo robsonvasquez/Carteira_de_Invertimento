@@ -2,7 +2,7 @@ import { MouseEvent, useRef } from "react";
 
 interface ModalProps{
   showModal: boolean;
-  children: JSX.Element[];
+  children: JSX.Element;
   onClose: () => void;
 }
 export default function Modal(props: ModalProps){
@@ -27,7 +27,7 @@ export default function Modal(props: ModalProps){
         >  
           <div 
             className="
-            relative w-[30%] min-w-min
+            relative
             flex flex-col gap-2
             justify-center items-center
             p-5 bg-white rounded-lg

@@ -1,13 +1,11 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import Table from "../components/table/Table";
-import TopBar from "../components/bars/TopBar";
-import BottomBar from "../components/bars/BottomBar";
+
 import CardResume from "../components/cards/CardResume";
 import CardGraph from "../components/cards/CardGraph";
 import CardActive from "../components/cards/CardActive";
 import Button from "../components/form/Button";
-import { useState } from "react";
 import Modal from "../components/modal/Modal";
 import Title from "../components/Title";
 import Form from "../components/form/Form";
@@ -24,21 +22,21 @@ const l = [
   },    
   {
     id: 2,
-    active: 'Poupança',
+    active: 'CDI',
     currentPrice: 10,
     paidPrice: 20,
     variation: 2,
   },
   {
     id: 3,
-    active: 'Poupança',
+    active: 'Ação',
     currentPrice: 10,
     paidPrice: 20,
     variation: -24,
   },
   {
     id: 4,
-    active: 'Poupança',
+    active: 'PETROBRAS',
     currentPrice: 10,
     paidPrice: 20,
     variation: 7,
@@ -74,8 +72,10 @@ export default function Wallet(){
       </Layout>
      
       <Modal showModal={showModal} onClose={() => setShowModal(false)}>
-        <Title>CADASTRAR ATIVO</Title>
-        <Form inputs={formNewActive} button="Cadastrar ativo"/>
+        <>
+          <Title>CADASTRAR ATIVO</Title>
+          <Form inputs={formNewActive} button="Cadastrar ativo"/>
+        </>      
       </Modal> 
     </>
   );
