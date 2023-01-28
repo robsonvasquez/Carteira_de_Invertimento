@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ArrowVariation from "../ArrowVariation";
 import Graph from "../graphs/Graph";
 import Modal from "../modal/Modal";
 import {ActiveInterface} from "./Table";
@@ -234,12 +235,21 @@ export default function Cell(props: CellProps){
             divide-y divide-zinc-300
             w-[400px] sm:w-[540px] md:w-[668px] lg-[924px]"
         >
-          <div className="flex flex-col pl-5 gap-5 justify-between text-2xl font-semibold">
-            <h1>{props.active.active}</h1>
-            <div className="flex justify-start gap-10 text-base font-medium">
-              <h2><span className="text-gray-600">Preço de Compra: </span> R$ {props.active.paidPrice}</h2>
-              <h2><span className="text-gray-600">Preço de Atual: </span> R$ {props.active.currentPrice}</h2>
-              <h2 className={`${props.active.variation > 0 ? ('text-lime-800') : ('text-red-600')}`}><span className="text-gray-600">Variação: </span> {props.active.variation}</h2>
+          <div className="flex flex-col pl-5 gap-5 justify-between">
+            <h1 className="text-2xl font-black text-gray-800">{props.active.active}</h1>
+            <div className="flex justify-start gap-10 text-lg font-semibold text-gray-800">
+              <h2>
+                <span className="text-base text-gray-600">Preço de Compra: </span>
+                 R$ {props.active.paidPrice}
+              </h2>
+              <h2>
+                <span className="text-base text-gray-600">Preço de Atual: </span>
+                 R$ {props.active.currentPrice}
+              </h2>
+              <h2 className="flex items-center">
+                <span className="text-base text-gray-600">Variação: </span>
+                <ArrowVariation>{props.active.variation}</ArrowVariation>
+              </h2>
             </div>
           </div>
           <div className="flex pt-4 w-full h-96">

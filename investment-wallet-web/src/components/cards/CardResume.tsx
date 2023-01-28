@@ -10,21 +10,27 @@ interface CardResumeProps{
 export default function CardResume(props: CardResumeProps){
 
   return(
-    <div className="w-[80%] lg:w-[50%] p-4 bg-white border border-zinc-300 rounded-lg">
-      <h1 className="mb-3 text-2xl">{props.title}</h1>
-      <div className="flex justify-between">
-        <div>
-          <h2>Saldo</h2>
-          <h3>R$ {0 | props.balance}</h3>
-        </div>
-        <div>
-          <h2>Valor aplicado</h2>
-          <h3>R$ {0 | props.appliedValue}</h3>
-        </div>
-        <div>
-          <h2>Rentabilidade</h2>
-          <ArrowVariation className="flex justify-start" >{props.variation}</ArrowVariation>
-        </div>
+    <div
+      className="
+        w-[80%] lg:w-[50%] p-4 gap-5 flex flex-col 
+        bg-white border border-zinc-300 rounded-lg"
+      >
+      <h1 className="text-2xl font-black text-gray-800">{props.title}</h1>
+      <div className="flex justify-between text-lg font-semibold text-gray-800"> 
+        <h2>
+          <span className="text-base text-gray-600"> Saldo: </span>
+          R$ {0 | props.balance}
+        </h2>
+        <h2>
+          <span className="text-base text-gray-600">Valor aplicado: </span>
+           R$ {0 | props.appliedValue}
+        </h2>
+        <h2 className="flex items-center">
+          <span className="text-base text-gray-600">Rentabilidade: </span>
+          <ArrowVariation>{props.variation}</ArrowVariation>
+        </h2>
+          
+        
       </div>
     </div>
   );
