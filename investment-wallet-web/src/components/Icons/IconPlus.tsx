@@ -1,7 +1,6 @@
 import { useState } from "react";
 import colors from "tailwindcss/colors";
 import { PlusCircle } from "phosphor-react";
-import { useNavigate }  from "react-router-dom";
 import Modal from "../modal/Modal";
 import Form from "../form/Form";
 import { formNewWallet } from "../../FormatForms";
@@ -28,8 +27,10 @@ export default function IconPlus(props: IconPlusProps){
       </button>
       
       <Modal showModal={showModal} onClose={() => setShowModal(false)}>
-        <Title >CADASTRAR UMA NOVA CARTEIRA</Title>
-        <Form inputs={formNewWallet} button="Cadastrar carteira"/>
+        <>
+          <Title >CADASTRAR UMA NOVA CARTEIRA</Title>
+          <Form inputs={formNewWallet} button="Cadastrar carteira"/>
+        </>
       </Modal>
     </>
   );
