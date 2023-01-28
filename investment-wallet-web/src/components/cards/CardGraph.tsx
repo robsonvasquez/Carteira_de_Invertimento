@@ -1,49 +1,47 @@
 import Graph from "../graphs/Graph";
-import Select from "../form/Select";
-import { defaultProps } from "@nivo/pie";
 
 interface CardGraphProps{
   title: string;
 }
 
-const list = [
+const list  = [
   {
-    id: 0,
+    key: 0,
     value: '1',
     option:'1 dia',
   },
   {
-    id: 1,
+    key: 1,
     value: '3',
     option:'3 dias',
   },
   {
-    id: 2,
+    key: 2,
     value: '7',
     option:'1 semana',
   },
   {
-    id: 3,
+    key: 3,
     value: '14',
     option:'2 semanas',
   },
   {
-    id: 4,
+    key: 4,
     value: '30',
     option:'1 mês',
   },
   {
-    id: 5,
+    key: 5,
     value: '90',
     option:'3 meses',
   },
   {
-    id: 6,
+    key: 6,
     value: '180',
     option:'6 meses',
   },
   {
-    id: 7,
+    key: 7,
     value: '356',
     option:'1 ano',
   },
@@ -219,14 +217,9 @@ export default function CardGraph(props: CardGraphProps){
 
   return(
     <div className="flex flex-col w-[80%] p-4 bg-white border border-zinc-300 rounded-lg">
-      <div className="flex justify-between">
-        <h1 className="text-2xl">{props.title}</h1>
-        <Select
-          options={list}
-        />
-      </div>
+      <h1 className="text-2xl">{props.title}</h1>
       <div className="flex w-full h-96">
-        <Graph data={data}/>
+        <Graph data={data} options={list}/>
       </div>
     </div>
   );

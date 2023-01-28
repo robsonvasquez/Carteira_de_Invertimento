@@ -1,13 +1,13 @@
 import {CaretDown, CaretUp} from 'phosphor-react';
 import { useState } from 'react';
-import colors, { slate } from 'tailwindcss/colors'
+import colors from 'tailwindcss/colors'
 
 interface optionInterface{
-  id: number
+  key: number
   value: string | number;
   option: string;
 }
-interface SelectProps{
+export interface SelectProps{
   options: optionInterface[];
 }
 export default function Select(props: SelectProps){
@@ -47,9 +47,9 @@ export default function Select(props: SelectProps){
             >
               {props.options.map((op: optionInterface) => (
                 <span 
-                  className={`pl-2 rounded hover:bg-sky-50 ${selected.id == op.id ? 'bg-sky-100' : '' }`}
+                  className={`pl-2 rounded hover:bg-sky-50 ${selected.key == op.key ? 'bg-sky-100' : '' }`}
                   onClick={e => (setSelected(op), setShowOption(false))} 
-                  key={op.id}
+                  key={op.key}
                 >
                   {op.option}
                 </span>
