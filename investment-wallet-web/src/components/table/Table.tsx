@@ -30,7 +30,7 @@ export default function Table(props : TableProps){
         </thead>
         <tbody className='flex flex-col gap-1'>
         {props.list.map((l : ActiveInterface) => (
-          <tr key={l.id} className='bg-white flex border border-gray-300 rounded-lg p-1'>
+          <tr key={l.id} className='bg-white flex border border-zinc-300 rounded-lg p-1'>
             <Cell active={l}/>
             <td className='w-1/5 flex justify-center items-center'>{l.currentPrice}</td>
             <td className='w-1/5 flex justify-center items-center'>{l.paidPrice}</td>
