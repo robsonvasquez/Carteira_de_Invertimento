@@ -1,9 +1,10 @@
+import ArrowVariation from "../ArrowVariation";
 
 interface CardResumeProps{
   balance: number;
   appliedValue: number;
   title: string;
-  profitability: number;
+  variation: number;
 }
 
 export default function CardResume(props: CardResumeProps){
@@ -22,7 +23,7 @@ export default function CardResume(props: CardResumeProps){
         </div>
         <div>
           <h2>Rentabilidade</h2>
-          <h3 className={props.profitability > 0 ? `text-lime-800` : `text-red-600`}>{0 | props.profitability}%</h3>
+          <ArrowVariation className="flex justify-start" >{props.variation}</ArrowVariation>
         </div>
       </div>
     </div>

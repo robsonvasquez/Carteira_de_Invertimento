@@ -1,6 +1,9 @@
 import {NotePencil, Trash, ArrowUp, ArrowDown } from 'phosphor-react';
+import colors from 'tailwindcss/colors';
+import ArrowVariation from '../ArrowVariation';
+import Cell from './Cell';
 
-export interface ElementProps{
+export interface ActiveInterface{
   id: number,
   active: string,
   currentPrice: number,
@@ -10,14 +13,13 @@ export interface ElementProps{
 
 interface TableProps{
   header: string[];
-  list: ElementProps[];
+  list: ActiveInterface[];
 }
 
-import colors from 'tailwindcss/colors';
-
 export default function Table(props : TableProps){
+  
   return(  
-    
+    <>
       <table className='w-full font-medium'>
         <thead>
           <tr className="flex font-semibold px-1">
@@ -27,16 +29,13 @@ export default function Table(props : TableProps){
           </tr>
         </thead>
         <tbody className='flex flex-col gap-1'>
-        {props.list.map((l : ElementProps) => (
+        {props.list.map((l : ActiveInterface) => (
           <tr key={l.id} className='bg-white flex border border-gray-300 rounded-lg p-1'>
-            <td className='w-1/5 flex justify-center items-center'>{l.active}</td>
+            <Cell active={l}/>
             <td className='w-1/5 flex justify-center items-center'>{l.currentPrice}</td>
             <td className='w-1/5 flex justify-center items-center'>{l.paidPrice}</td>
-            <td className={`w-1/5 flex justify-start items-center ${l.variation > 0 ? ('text-lime-800') : ('text-red-600')}`}>
-              <div className='w-1/2 flex justify-end'>
-                {l.variation > 0 ? <ArrowUp size={20} /> : <ArrowDown size={20} />}
-              </div>
-              {Math.abs(l.variation)}%
+            <td className='w-1/5'>
+              <ArrowVariation classNameChildrens='w-1/2'>{l.variation}</ArrowVariation>
             </td>
             <td className="flex justify-center gap-8 w-1/5">
               <NotePencil size={25} color={colors.lime[800]}/>
@@ -46,6 +45,7 @@ export default function Table(props : TableProps){
         ))}
         </tbody>
       </table>
-    
+      
+  </>   
   );
 }
