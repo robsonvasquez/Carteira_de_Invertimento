@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ArrowVariation from "../ArrowVariation";
+import TitleCard from "../cards/TitleCard";
 import Graph from "../graphs/Graph";
 import Modal from "../modal/Modal";
 import {ActiveInterface} from "./Table";
@@ -236,7 +237,7 @@ export default function Cell(props: CellProps){
             w-[400px] sm:w-[540px] md:w-[668px] lg-[924px]"
         >
           <div className="flex flex-col pl-5 gap-5 justify-between">
-            <h1 className="text-2xl font-black text-gray-800">{props.active.active}</h1>
+            <TitleCard>{props.active.active}</TitleCard>
             <div className="flex justify-start gap-10 text-lg font-semibold text-gray-800">
               <h2>
                 <span className="text-base text-gray-600">Preço de Compra: </span>

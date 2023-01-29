@@ -1,4 +1,5 @@
 import ArrowVariation from "../ArrowVariation";
+import TitleCard from "./TitleCard";
 
 interface CardResumeProps{
   balance: number;
@@ -14,8 +15,8 @@ export default function CardResume(props: CardResumeProps){
       className="
         w-[80%] lg:w-[50%] p-4 gap-5 flex flex-col 
         bg-white border border-zinc-300 rounded-lg"
-      >
-      <h1 className="text-2xl font-black text-gray-800">{props.title}</h1>
+    >
+      <TitleCard>{props.title}</TitleCard> 
       <div className="flex justify-between text-lg font-semibold text-gray-800"> 
         <h2>
           <span className="text-base text-gray-600"> Saldo: </span>

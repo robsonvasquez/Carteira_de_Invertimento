@@ -1,6 +1,7 @@
 import colors from "tailwindcss/colors";
 import {ArrowUp, ArrowDown} from "phosphor-react";
 import PieGraph from "../graphs/PieGraph";
+import TitleCard from "./TitleCard";
 
 const data = [
   {
@@ -55,7 +56,8 @@ export default function CardWallet(props: CardWalletProps){
         <PieGraph data={data}/>
       </div>  
       <div className="h-full w-[45%] flex flex-col justify-between py-8 pr-3">
-        <span className="flex items-center justify-center text-lg sm:text-2xl font-medium">{props.title}</span>
+        <TitleCard className="text-center">{props.title}</TitleCard>
+        {/* <span className="flex items-center justify-center text-lg sm:text-2xl font-medium">{props.title}</span> */}
 
         <div className="w-full flex flex-col sm:flex-row justify-between font-medium">
           <span className="flex items-center truncate">R$ {props.balance}</span>        

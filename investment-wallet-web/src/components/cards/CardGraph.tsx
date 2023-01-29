@@ -1,4 +1,5 @@
 import Graph from "../graphs/Graph";
+import TitleCard from "./TitleCard";
 
 interface CardGraphProps{
   title: string;
@@ -217,7 +218,7 @@ export default function CardGraph(props: CardGraphProps){
 
   return(
     <div className="flex flex-col w-[80%] p-4 bg-white border border-zinc-300 rounded-lg">
-      <h1 className="text-2xl">{props.title}</h1>
+      <TitleCard>{props.title}</TitleCard>
       <div className="flex w-full h-96">
         <Graph data={data} options={list}/>
       </div>
