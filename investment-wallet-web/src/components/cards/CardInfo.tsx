@@ -1,10 +1,11 @@
 import PieGraph from "../graphs/PieGraph";
+import TitleCard from "./TitleCard";
 
-interface CardActive{
+interface CardInfoProps{
   text: string
 }
 
-export default function CardActive(props: CardActive){
+export default function CardInfo(props: CardInfoProps){
 
   const data = [
     {
@@ -42,7 +43,7 @@ export default function CardActive(props: CardActive){
   return (
     <div className="w-5/12 h-96 p-4 flex flex-col bg-white border border-zinc-300 rounded-lg">
       <div className="flex justify-start">
-        <h1 className="mb-3 text-2xl">{props.text}</h1>
+        <TitleCard>{props.text}</TitleCard>
       </div>
       <div className="w-full h-full flex justify-center items-center">
         <PieGraph data={data}/>
