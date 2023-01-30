@@ -17,7 +17,7 @@ export default function Select(props: SelectProps){
   const [showOptions, setShowOption] = useState(false)
 
   return(
-    <div className='relative h-9 w-32 flex flex-col'>
+    <div className='relative h-9 w-32 flex flex-col text-base font-medium text-gray-800'>
       <button 
         className='
           w-full h-full flex flex-col items-center
