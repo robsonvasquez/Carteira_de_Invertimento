@@ -1,6 +1,7 @@
 import ArrowVariation from "../ArrowVariation";
 import Graph from "../graphs/Graph";
 import {ActiveInterface} from "../table/Table";
+import InformationCard from "./InformationCard";
 import TitleCard from "./TitleCard";
 
 const data = [ //REMOVER DEPOIS DADOS TEMPORÁRIOS
@@ -224,19 +225,16 @@ export default function CardActive(props: CardActiveProps){
     >
       <div className="flex flex-col pl-5 gap-5 justify-between">
         <TitleCard>{props.active.active}</TitleCard>
-        <div className="flex justify-start gap-10 text-lg font-semibold text-gray-800">
-          <h2>
-            <span className="text-base text-gray-600">Preço de Compra: </span>
-            R$ {props.active.paidPrice}
-          </h2>
-          <h2>
-            <span className="text-base text-gray-600">Preço de Atual: </span>
-            R$ {props.active.currentPrice}
-          </h2>
-          <h2 className="flex items-center">
-            <span className="text-base text-gray-600">Variação: </span>
+        <div className="flex justify-between ">
+          
+          <InformationCard label="Preço de Compra:" text={`R$ ${props.active.paidPrice}`}/>
+          
+          <InformationCard label="Preço Atual:" text={`R$ ${props.active.currentPrice}`}/>
+            
+          <InformationCard label="Variação:">
             <ArrowVariation>{props.active.variation}</ArrowVariation>
-          </h2>
+          </InformationCard>
+
         </div>
       </div>
       <div className="flex pt-4 w-full h-96">

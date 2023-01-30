@@ -1,4 +1,5 @@
 import ArrowVariation from "../ArrowVariation";
+import InformationCard from "./InformationCard";
 import TitleCard from "./TitleCard";
 
 interface CardResumeProps{
@@ -18,19 +19,14 @@ export default function CardResume(props: CardResumeProps){
     >
       <TitleCard>{props.title}</TitleCard> 
       <div className="flex justify-between text-lg font-semibold text-gray-800"> 
-        <h2>
-          <span className="text-base text-gray-600"> Saldo: </span>
-          R$ {0 | props.balance}
-        </h2>
-        <h2>
-          <span className="text-base text-gray-600">Valor aplicado: </span>
-           R$ {0 | props.appliedValue}
-        </h2>
-        <h2 className="flex items-center">
-          <span className="text-base text-gray-600">Rentabilidade: </span>
+        
+        <InformationCard label="Saldo:" text={`R$ ${0 | props.balance}`}/>        
+
+        <InformationCard label="Valor aplicado:" text={`R$ ${0 | props.appliedValue}`}/>
+
+        <InformationCard label="Rentabilidade:">
           <ArrowVariation>{props.variation}</ArrowVariation>
-        </h2>
-          
+        </InformationCard>
         
       </div>
     </div>
