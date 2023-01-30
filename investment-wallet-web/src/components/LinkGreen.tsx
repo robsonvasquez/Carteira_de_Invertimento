@@ -12,7 +12,6 @@ export default function LinkGreen(props: LinkGreenProps){
       to={props.to}
       className={
         `text-theme-color text-sm font-bold
-        no-underline underline-offset-2
         decoration-2 hover:underline
         ${props.className}`}
     >
