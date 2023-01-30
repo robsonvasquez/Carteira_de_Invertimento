@@ -20,11 +20,12 @@ export default function Cell(props: CellProps){
         <button onClick={() => setShowModal(true)}>
           {props.active.active}
         </button>
+        <Modal showModal={showModal} onClose={() => setShowModal(false)}>
+          <CardActive active={props.active}/>
+        </Modal>
       </td>
 
-      <Modal showModal={showModal} onClose={() => setShowModal(false)}>
-        <CardActive active={props.active}/>
-      </Modal>
+      
     </>
   );
 }
