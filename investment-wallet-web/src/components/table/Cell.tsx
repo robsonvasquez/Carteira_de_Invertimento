@@ -16,8 +16,8 @@ export default function Cell(props: CellProps){
 
   return(
     <>
-      <td className='w-1/5 flex justify-center items-center hover:text-zinc-500'>
-        <button onClick={() => setShowModal(true)}>
+      <td className='w-1/5 flex justify-center items-center'>
+        <button className="hover:text-theme-light-color hover:underline decoration-2" onClick={() => setShowModal(true)}>
           {props.active.active}
         </button>
         <Modal showModal={showModal} onClose={() => setShowModal(false)}>
