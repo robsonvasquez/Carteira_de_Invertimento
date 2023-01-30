@@ -7,7 +7,7 @@ import Title from "../components/Title";
 export default function Profile(){
   return(
     <Layout>
-      <div className="w-screen h-full flex justify-center items-center">
+      <div className="w-full flex justify-center items-center">
         <div className="flex justify-center mt-4">
           <div className="w-96 flex flex-col">
             <Title>MINHA CONTA</Title>

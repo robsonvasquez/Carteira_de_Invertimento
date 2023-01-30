@@ -14,7 +14,7 @@ export default function Layout(props: {children: JSX.Element}){
   }
 
   return(
-    <div className="w-full flex">
+    <div className="w-full h-full flex">
       <Sidebar open={open}/>
       <div 
         ref={refInside}
@@ -24,13 +24,13 @@ export default function Layout(props: {children: JSX.Element}){
         onClick={handleInsideClick}
       >
         <div
-          className={`w-full flex flex-col 
+          className={`w-full h-full flex flex-col justify-between
             ${open ? 'pointer-events-none': ''}
             scrollbar-thin scrollbar-track-gray-300 scrollbar-thumb-gray-400`}
         >                
-          <TopBar open={open} onOpen={() => setOpen(true)}/>
-          {props.children}
-          <BottomBar/>
+          <div><TopBar open={open} onOpen={() => setOpen(true)}/></div>
+          <div>{props.children}</div>
+          <div><BottomBar/></div>
         </div>
       </div>   
     </div>
