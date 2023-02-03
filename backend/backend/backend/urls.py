@@ -21,13 +21,15 @@ from rest_framework import routers
 
 from apps.wallet.api.viewsets import WalletViewSet
 from apps.active.api.viewsets import ActiveViewSet
+from apps.user.api.viewsets import UserViewSet
 
 routers = routers.DefaultRouter()
+routers.register(r'user', UserViewSet)
 routers.register(r'wallet', WalletViewSet)
 routers.register(r'active', ActiveViewSet)
 
 urlpatterns = [
   path('admin/', admin.site.urls),
   path('api-auth/', include('rest_framework.urls')),
-  path('api/', include((routers.urls, 'app_name'))),
+  path('api/', include(routers.urls)),
 ]
