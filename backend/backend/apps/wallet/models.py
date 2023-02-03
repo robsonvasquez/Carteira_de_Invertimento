@@ -1,7 +1,7 @@
-from django.contrib.auth.models import User
 from django.db import models
 
-from apps.active.models import Active
+from apps.user.models import User
+# from apps.active.models import Active
 
 class Wallet(models.Model):
   user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -13,7 +13,7 @@ class Wallet(models.Model):
     return self.name
 
   # @property
-  def variation():
-    print(Active.object.all())
+  # def variation():
+  #   print(Active.object.all())
     
     # models.FloatField(default=0.0, editable=False)
