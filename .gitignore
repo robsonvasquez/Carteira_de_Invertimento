@@ -1,5 +1,5 @@
 **/migrations/**
 **/__pycache__/**
-backend/backend/.env
+backend/.env
 backend/backend/db.sqlite3
 
