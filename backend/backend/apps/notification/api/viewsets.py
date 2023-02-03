@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
 from apps.notification.api.serializers import NotificationSerializer
-from apps.notification.models import Notification
+from apps.notification.models import Nofification
 
 class NotificationViewSet(ModelViewSet):
-  queryset = Notification.objects.all()
+  queryset = Nofification.objects.all()
   serializer_class = NotificationSerializer
