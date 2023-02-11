@@ -11,4 +11,4 @@ class User(AbstractUser):
   is_trusty = models.BooleanField(default=False, help_text="Designates whether this user has confirmed his account")
 
   USERNAME_FIELD = 'email'
-  REQUIRED_FIELDS = ['username']
+  REQUIRED_FIELDS = ['username', 'cpf']
