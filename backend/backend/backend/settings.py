@@ -34,21 +34,28 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'rest_framework',
-    'guardian',
-    'apps.user',
-    'apps.wallet',
-    'apps.active',
-    'apps.notification',
+  'django.contrib.admin',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
+  'rest_framework',
+  'rest_framework.authtoken',
+  'guardian',
+  'apps.user',
+  'apps.wallet',
+  'apps.active',
+  'apps.notification',
 ]
 
 AUTH_USER_MODEL = 'user.User'
+
+REST_FRAMEWORK = {
+  'DEFAULT_AUTHENTICATION_CLASSES': [
+    'rest_framework.authentication.TokenAuthentication',
+  ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
