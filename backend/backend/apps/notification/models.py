@@ -1,4 +1,6 @@
 from django.db import models
+from guardian.shortcuts import assign_perm
+
 from apps.user.models import User
 
 class Notification(models.Model):
@@ -9,3 +11,13 @@ class Notification(models.Model):
 
   def __str__(self):
     return self.title
+
+  def save(self, *args, **kwargs):
+    super(Notification, self).save(*args, **kwargs)
+    for permission in [
+      'notification.add_notification',
+      'notification.change_notification',
+      'notification.view_notification',
+      'notification.delete_notification'
+    ]:
+      assign_perm(permission, self.user, self)

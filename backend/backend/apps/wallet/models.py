@@ -1,7 +1,8 @@
 from django.db import models
 
+from guardian.shortcuts import assign_perm
+
 from apps.user.models import User
-# from apps.active.models import Active
 
 class Wallet(models.Model):
   user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
@@ -12,8 +13,12 @@ class Wallet(models.Model):
   def __str__(self):
     return self.name
 
-  # @property
-  # def variation():
-  #   print(Active.object.all())
-    
-    # models.FloatField(default=0.0, editable=False)
+  def save(self, *args, **kwargs):
+    super(Wallet, self).save(*args, **kwargs)
+    for permission in [
+      'wallet.add_wallet',
+      'wallet.change_wallet',
+      'wallet.view_wallet',
+      'wallet.delete_wallet',
+    ]:
+      assign_perm(permission, self.user, self)  

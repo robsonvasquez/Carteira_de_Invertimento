@@ -1,5 +1,8 @@
 from django.db import models
 from django.core.validators import MinValueValidator
+
+from guardian.shortcuts import assign_perm
+
 # from apps.wallet.models import Wallet
 
 class Active(models.Model):
@@ -16,3 +19,13 @@ class Active(models.Model):
 
   def __str__(self):
     return self.name
+
+  def save(self, *args, **kwargs):
+    super(Active, self).save(*args, **kwargs)
+    for permission in [
+      'active.add_active',
+      'active.change_active',
+      'active.view_active',
+      'active.delete_active',
+    ]:
+      assign_perm(permission, self.wallet.user, self)
