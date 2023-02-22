@@ -10,7 +10,7 @@ class Active(models.Model):
   amount = models.IntegerField(default=0, validators=[MinValueValidator(0)], blank=False)
   price_paid = models.DecimalField(default=0.0, validators=[MinValueValidator(0.0)], max_digits=20, decimal_places=2, blank=False)
   invested_price = models.DecimalField(default=0.0, validators=[MinValueValidator(0.0)], max_digits=20, decimal_places=2, blank=False)
-  # rever taxa de corretagem
+  # TODO rever taxa de corretagem
   brokerage_rate = models.DecimalField(default=0.0, validators=[MinValueValidator(0.0)], max_digits=20, decimal_places=2, blank=True)
   create_date = models.DateTimeField(auto_now_add=True)
 
