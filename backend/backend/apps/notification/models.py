@@ -1,7 +1,7 @@
 from django.db import models
 from apps.user.models import User
 
-class Nofification(models.Model):
+class Notification(models.Model):
   user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
   title = models.CharField(max_length=100, blank=False)
   description = models.CharField(max_length=256, default='', blank=True)

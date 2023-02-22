@@ -1,7 +1,7 @@
 from rest_framework.serializers import ModelSerializer
-from apps.notification.models import Nofification
+from apps.notification.models import Notification
 
 class NotificationSerializer(ModelSerializer):
   class Meta:
-    model = Nofification
+    model = Notification
     fields = '__all__'

@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Nofification
+from .models import Notification
 
-admin.site.register(Nofification)
+admin.site.register(Notification)
