@@ -17,7 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 
+from rest_framework import routers
+from rest_framework.authtoken import views
+
+from apps.wallet.api.viewsets import WalletViewSet
+from apps.active.api.viewsets import ActiveViewSet
+from apps.user.api.viewsets import UserViewSet
+
+routers = routers.DefaultRouter()
+routers.register(r'user', UserViewSet)
+routers.register(r'wallet', WalletViewSet)
+routers.register(r'active', ActiveViewSet)
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls'))
+  path('admin/', admin.site.urls),
+  path('api-auth/', views.obtain_auth_token),
+  path('api/', include(routers.urls)),
 ]
