@@ -12,8 +12,6 @@ from apps.user.api.serializers import UserSerializer
 from apps.wallet.api.serializers import WalletSerializer
 from apps.notification.api.serializers import NotificationSerializer
 from apps.active.api.serializers import ActiveSerializer
-# from apps.active.models import Active
-from apps.wallet.models import Wallet
 
 class UserViewSet(ModelViewSet):
   queryset = User.objects.all()
