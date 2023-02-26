@@ -1,40 +1,37 @@
-import React, { createContext, useEffect, useState } from "react";
-import { IAuthProvider, IUser, Icontext } from "./types";
+import { createContext, useEffect, useState } from "react";
+
+import { IAuthProvider, IUser, Icontext, ILogin } from "./types";
 import { LoginRequest, getUserLocalStorage, setUserLocalStorage } from "./util";
 
 export const AuthContext = createContext<Icontext>({} as Icontext)
 
-export const AuthProvider = ({children}: IAuthProvider) => {
+export function AuthProvider({children}: IAuthProvider) {
 
-    const [user, setUser] = useState<IUser | null>();
+  const [user, setUser] = useState<IUser | null>();
 
-    useEffect(() => {
-        const user = getUserLocalStorage();
+  useEffect(() => {
+    const user = getUserLocalStorage();
+    if(user) setUser(user);
+  }, []);
 
-        if(user){
-            setUser(user);
-        }
-        
-    }, []);
+  async function authenticate(login: ILogin){
 
-    async function authenticate(email: string, password: string){
-        const response = await LoginRequest(email, password);
+    const response = await LoginRequest(login);
+    const payload = {token: response.token, email: login.username};
 
-        const payload = {token: response.token, email};
+    setUser(payload);
+    setUserLocalStorage(payload);
+  }
 
-        setUser(payload);
-        setUserLocalStorage(payload);
-    }
+  function logout(){
+    setUser(null);
+    localStorage.removeItem('user');
+  }
 
-    function logout(){
-        setUser(null);
-        localStorage.removeItem('user');
-    }
-
-    return(
-        <AuthContext.Provider value = {{...user, authenticate, logout}}>
-            {children}
-        </AuthContext.Provider>
-    )
+  return(
+    <AuthContext.Provider value = {{...user, authenticate, logout}}>
+      {children}
+    </AuthContext.Provider>
+  )
 
 }

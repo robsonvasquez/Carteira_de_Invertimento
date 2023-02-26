@@ -1,8 +1,9 @@
 import { FormEvent , FormHTMLAttributes } from "react";
+import {useNavigate } from "react-router-dom";
+
 import Button from "./Button";
 import Input, {InputProps} from "./Input";
 import { useAuth } from "../../contexts/AuthProvider/useAuth";
-import {useNavigate } from "react-router-dom";
 
 interface FormProps extends FormHTMLAttributes<HTMLFormElement>{
   inputs: InputProps[];
@@ -11,7 +12,6 @@ interface FormProps extends FormHTMLAttributes<HTMLFormElement>{
 }
 
 export default function Form(props: FormProps){
-
   const auth = useAuth();
   const navigate = useNavigate();
 
@@ -20,17 +20,11 @@ export default function Form(props: FormProps){
     
     const formData = new FormData(e.target as HTMLFormElement)
     const data = Object.fromEntries(formData)
-    
-    console.log(data)
 
     if(props.type === 'login'){
-
-      await auth.authenticate(String(data.email), String(data.password))
-
+      await auth.authenticate(data)
       navigate('/');
-
     }
-
   }
 
   return(
