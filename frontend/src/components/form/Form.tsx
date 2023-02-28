@@ -3,7 +3,7 @@ import {useNavigate } from "react-router-dom";
 
 import Button from "./Button";
 import Input, {InputProps} from "./Input";
-import { useAuth } from "../../contexts/AuthProvider/useAuth";
+import { useAuth } from "../../authProvider/useAuth";
 
 interface FormProps extends FormHTMLAttributes<HTMLFormElement>{
   inputs: InputProps[];

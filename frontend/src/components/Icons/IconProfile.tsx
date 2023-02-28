@@ -2,7 +2,7 @@ import { useState } from "react";
 import colors from "tailwindcss/colors";
 import { CaretUp, Gear, SignOut, Triangle, UserCircle } from "phosphor-react";
 import {  useNavigate } from "react-router-dom";
-import { useAuth } from "../../contexts/AuthProvider/useAuth";
+import { useAuth } from "../../authProvider/useAuth";
 
 interface IconProfileProps{
   size: number;

@@ -1,4 +1,4 @@
-import { useAuth } from "../../contexts/AuthProvider/useAuth"
+import { useAuth } from "../../authProvider/useAuth"
 import Login from "../../pages/Login";
 
 export const ProtecteLayout = ({children}: {children: JSX.Element}) => {
