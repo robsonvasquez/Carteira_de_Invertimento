@@ -12,9 +12,9 @@ export function getUserLocalStorage(){
   return user ?? null;
 }
 
-export async function LoginRequest(login: ILogin){
+export async function loginRequest(login: ILogin){
   try {
-    const request = await Api.post('api-auth/', login);
+    const request = await Api.post('auth/', login);
     return request.data;
   } catch (error) {
     return alert("Inválidos email ou senha!");      
