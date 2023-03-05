@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 
 import { IAuthProvider, IUser, Icontext, ILogin } from "./types";
-import { LoginRequest, getUserLocalStorage, setUserLocalStorage } from "./util";
+import { loginRequest, getUserLocalStorage, setUserLocalStorage } from "./util";
 
 export const AuthContext = createContext<Icontext>({} as Icontext)
 
@@ -16,8 +16,8 @@ export function AuthProvider({children}: IAuthProvider) {
 
   async function authenticate(login: ILogin){
 
-    const response = await LoginRequest(login);
-    const payload = {token: response.token, email: login.username};
+    const response = await loginRequest(login);
+    const payload = {token: response.token, id: response.id, email: response.email};
 
     setUser(payload);
     setUserLocalStorage(payload);
