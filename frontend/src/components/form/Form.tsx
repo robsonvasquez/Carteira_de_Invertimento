@@ -6,7 +6,7 @@ import Input, {InputProps} from "./Input";
 import { useAuth } from "../../authProvider/useAuth";
 
 interface FormProps extends FormHTMLAttributes<HTMLFormElement>{
-  inputs: InputProps[];
+  form: {url: string, inputs: InputProps[]};
   button: string;
   type?: string;
 }
@@ -29,8 +29,15 @@ export default function Form(props: FormProps){
 
   return(
     <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-      {props.inputs.map((input : InputProps) => (
-        <Input key={input.key} name={input.name} placeholder={input.placeholder} type={input.type} image={input.image} value={input.value}/>
+      {props.form.inputs.map((input : InputProps) => (
+        <Input 
+          key={input.key}
+          name={input.name}
+          placeholder={input.placeholder}
+          type={input.type}
+          image={input.image}
+          value={input.value}
+        />
       ))}
       <Button text={props.button} type='submit'/>
     </form>

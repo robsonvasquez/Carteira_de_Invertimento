@@ -9,7 +9,7 @@ export default function NewCount(){
       <div className="w-96 flex flex-col">
         <Title>CRIE SUA CONTA</Title>
         <div className="flex flex-col justify-center items-center">
-          <Form inputs={formNewCount} button="Cadastrar"/>
+          <Form form={formNewCount} button="Cadastrar"/>
           
           <span className='text-center text-sm font-bold mt-5'>
             Ao se registrar, você aceita nossos&nbsp;

@@ -12,7 +12,7 @@ export default function Profile(){
           <div className="w-96 flex flex-col">
             <Title>MINHA CONTA</Title>
             <div className="flex flex-col justify-center items-center">
-              <Form inputs={formProfile} button="Salvar"/>
+              <Form form={formProfile} button="Salvar"/>
               <LinkGreen to='/' className='mt-5' text='Excluir minha conta.'/>
             </div>
           </div>

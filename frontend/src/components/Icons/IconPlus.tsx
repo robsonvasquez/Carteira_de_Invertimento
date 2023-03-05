@@ -29,7 +29,7 @@ export default function IconPlus(props: IconPlusProps){
       <Modal showModal={showModal} onClose={() => setShowModal(false)}>
         <>
           <Title >CADASTRAR UMA NOVA CARTEIRA</Title>
-          <Form inputs={formNewWallet} button="Cadastrar carteira"/>
+          <Form form={formNewWallet} button="Cadastrar carteira" onClose={() => setShowModal(false)}/>
         </>
       </Modal>
     </>
