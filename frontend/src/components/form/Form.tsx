@@ -1,14 +1,18 @@
 import { FormEvent , FormHTMLAttributes } from "react";
 import {useNavigate } from "react-router-dom";
 
+import { Api } from "../../services/api";
+import { useAuth } from "../../authProvider/useAuth";
+import { getHeader } from "../../authProvider/util";
+import { getUserLocalStorage } from "../../authProvider/util";
+
 import Button from "./Button";
 import Input, {InputProps} from "./Input";
-import { useAuth } from "../../authProvider/useAuth";
 
 interface FormProps extends FormHTMLAttributes<HTMLFormElement>{
   form: {url: string, inputs: InputProps[]};
   button: string;
-  type?: string;
+  onClose?: () => void;
 }
 
 export default function Form(props: FormProps){
@@ -21,9 +25,29 @@ export default function Form(props: FormProps){
     const formData = new FormData(e.target as HTMLFormElement)
     const data = Object.fromEntries(formData)
 
-    if(props.type === 'login'){
-      await auth.authenticate(data)
-      navigate('/');
+    try{
+    
+      const user = getUserLocalStorage()
+
+      if (!user) {
+        await auth.authenticate(data)
+        navigate('/')
+      }else{
+              
+        data.user = user.id
+      
+        await Api.post(props.form.url, data, getHeader())
+          .then(function (response) {
+            console.log('response',response)
+          })
+          .catch(function (error) {
+            console.error('error', error)
+          });
+
+      }
+      props.onClose ? props.onClose() : null
+    }catch (e){
+      console.error('error', e)
     }
   }
 
