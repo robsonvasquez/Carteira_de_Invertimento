@@ -12,6 +12,15 @@ export function getUserLocalStorage(){
   return user ?? null;
 }
 
+export function getHeader(){
+  const user = getUserLocalStorage()
+  return {
+    headers: {
+      Authorization : `Token ${user.token}`
+    }
+  }
+}
+
 export async function loginRequest(login: ILogin){
   try {
     const request = await Api.post('auth/', login);
