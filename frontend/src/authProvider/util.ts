@@ -26,6 +26,7 @@ export async function loginRequest(login: ILogin){
     const request = await Api.post('auth/', login);
     return request.data;
   } catch (error) {
-    return alert("Inválidos email ou senha!");      
+    // TODO caso nao esteja logado voltar para a tela de login
+    return alert("Inválidos email ou senha!");
   }
 }
